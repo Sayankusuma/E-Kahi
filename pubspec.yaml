@@ -1,0 +1,321 @@
+name: myapp
+description: A exported flutter project from FUNCTION12
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.2 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  google_fonts: ^3.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/screen/images/profile.png
+    - assets/screen/images/auto-group-4h6d.png
+    - assets/screen/images/bold-document.png
+    - assets/screen/images/auto-group-qvmf.png
+    - assets/screen/images/auto-group-wz1b.png
+    - assets/screen/images/bold-document-8Ld.png
+    - assets/screen/images/frame.png
+    - assets/screen/images/auto-group-2kim.png
+    - assets/screen/images/group-6.png
+    - assets/screen/images/frame-ky3.png
+    - assets/screen/images/auto-group-ep2q.png
+    - assets/screen/images/auto-group-9wfx.png
+    - assets/screen/images/bold-document-iQV.png
+    - assets/screen/images/bold-discount.png
+    - assets/screen/images/auto-group-pb4q.png
+    - assets/screen/images/notch.png
+    - assets/screen/images/auto-group-raq5.png
+    - assets/screen/images/frame-dX3.png
+    - assets/screen/images/auto-group-m84m.png
+    - assets/screen/images/icon-arrow-left.png
+    - assets/screen/images/button-close.png
+    - assets/screen/images/vector.png
+    - assets/screen/images/vector-Axm.png
+    - assets/screen/images/ayam-geprek-1.png
+    - assets/screen/images/vector-xmK.png
+    - assets/screen/images/auto-group-rded.png
+    - assets/screen/images/icon-arrow-left-wuF.png
+    - assets/screen/images/auto-group-zesh.png
+    - assets/screen/images/button-close-ZNM.png
+    - assets/screen/images/bold-document-axM.png
+    - assets/screen/images/vector-9rM.png
+    - assets/screen/images/nasi-goreng-2.png
+    - assets/screen/images/bold-discount-GB7.png
+    - assets/screen/images/frame-Hhf.png
+    - assets/screen/images/bold-document-eYD.png
+    - assets/screen/images/wifi.png
+    - assets/screen/images/auto-group-aa8m.png
+    - assets/screen/images/group-6-yKb.png
+    - assets/screen/images/frame-8iH.png
+    - assets/screen/images/bold-discount-ewX.png
+    - assets/screen/images/vector-pb7.png
+    - assets/screen/images/frame-nnq.png
+    - assets/screen/images/auto-group-xemb.png
+    - assets/screen/images/bold-document-kjf.png
+    - assets/screen/images/frame-Wiq.png
+    - assets/screen/images/auto-group-xkrw.png
+    - assets/screen/images/frame-cG5.png
+    - assets/screen/images/auto-group-zk9f.png
+    - assets/screen/images/bold-document-KAV.png
+    - assets/screen/images/bold-discount-sxh.png
+    - assets/screen/images/icon-arrow-left-eCm.png
+    - assets/screen/images/auto-group-oavh.png
+    - assets/screen/images/icon-arrow-left-PRF.png
+    - assets/screen/images/group-6-AB7.png
+    - assets/screen/images/auto-group-affk.png
+    - assets/screen/images/frame-coo.png
+    - assets/screen/images/bold-document-aEq.png
+    - assets/screen/images/bold-document-LE1.png
+    - assets/screen/images/bold-document-SXw.png
+    - assets/screen/images/ellipse-96.png
+    - assets/screen/images/icon-mobile-signal.png
+    - assets/screen/images/icon-arrow-left-JTo.png
+    - assets/screen/images/frame-eyT.png
+    - assets/screen/images/frame-LFw.png
+    - assets/screen/images/auto-group-zxxo.png
+    - assets/screen/images/bold-discount-ACm.png
+    - assets/screen/images/auto-group-xfc9.png
+    - assets/screen/images/bold-document-54q.png
+    - assets/screen/images/vector-q41.png
+    - assets/screen/images/profile-BtZ.png
+    - assets/screen/images/bold-discount-gqK.png
+    - assets/screen/images/bold-document-HPb.png
+    - assets/screen/images/frame-cu3.png
+    - assets/screen/images/frame-AvZ.png
+    - assets/screen/images/bold-discount-KoT.png
+    - assets/screen/images/profile-gtu.png
+    - assets/screen/images/profile-KQ1.png
+    - assets/screen/images/bold-chat.png
+    - assets/screen/images/auto-group-6mfj.png
+    - assets/screen/images/bold-chat-1fs.png
+    - assets/screen/images/frame-VTB.png
+    - assets/screen/images/bold-document-7hP.png
+    - assets/screen/images/rectangle-33.png
+    - assets/screen/images/bold-discount-ijX.png
+    - assets/screen/images/vector-zgM.png
+    - assets/screen/images/bold-discount-4w7.png
+    - assets/screen/images/auto-group-2izb.png
+    - assets/screen/images/profile-WtD.png
+    - assets/screen/images/bold-discount-GER.png
+    - assets/screen/images/bold-discount-tyB.png
+    - assets/screen/images/auto-group-xxwk.png
+    - assets/screen/images/icon-arrow-left-A2q.png
+    - assets/screen/images/bold-discount-frd.png
+    - assets/screen/images/profile-CrZ.png
+    - assets/screen/images/statusbar-battery.png
+    - assets/screen/images/bold-discount-Qpm.png
+    - assets/screen/images/bold-discount-Y5j.png
+    - assets/screen/images/auto-group-x92v.png
+    - assets/screen/images/bold-discount-12u.png
+    - assets/screen/images/frame-WVT.png
+    - assets/screen/images/ayam-geprek-1-uCh.png
+    - assets/screen/images/frame-C4d.png
+    - assets/screen/images/auto-group-v1fs.png
+    - assets/screen/images/bold-discount-uSm.png
+    - assets/screen/images/button-close-PLR.png
+    - assets/screen/images/bold-document-SA1.png
+    - assets/screen/images/profile-Jof.png
+    - assets/screen/images/rectangle-33-XHP.png
+    - assets/screen/images/profile-3mX.png
+    - assets/screen/images/frame-mjT.png
+    - assets/screen/images/whatsapp-image-2023-12-20-at-1540-1.png
+    - assets/screen/images/ellipse-94.png
+    - assets/screen/images/bold-document-qnm.png
+    - assets/screen/images/frame-hC1.png
+    - assets/screen/images/rectangle-33-2pD.png
+    - assets/screen/images/nasi-goreng-1.png
+    - assets/screen/images/bakso-1.png
+    - assets/screen/images/bold-document-ZBb.png
+    - assets/screen/images/auto-group-pkww.png
+    - assets/screen/images/bold-discount-jS5.png
+    - assets/screen/images/bold-document-BKK.png
+    - assets/screen/images/bold-document-wxh.png
+    - assets/screen/images/bakso-1-VDX.png
+    - assets/screen/images/bakso-1-3kq.png
+    - assets/screen/images/ayam-geprek-1-43X.png
+    - assets/screen/images/rectangle-33-JA9.png
+    - assets/screen/images/ellipse-95.png
+    - assets/screen/images/vector-t8m.png
+    - assets/screen/images/bold-discount-q5F.png
+    - assets/screen/images/profile-dQR.png
+    - assets/screen/images/bold-discount-EUd.png
+    - assets/screen/images/nasi-goreng-3.png
+    - assets/screen/images/rectangle-33-4SH.png
+    - assets/screen/images/auto-group-8pus.png
+    - assets/screen/images/bold-chat-RNd.png
+    - assets/screen/images/frame-nwF.png
+    - assets/screen/images/bold-document-nJy.png
+    - assets/screen/images/bold-discount-GfP.png
+    - assets/screen/images/frame-tkV.png
+    - assets/screen/images/rectangle-23.png
+    - assets/screen/images/vector-fPj.png
+    - assets/screen/images/rectangle-23-rMs.png
+    - assets/screen/images/rectangle-23-Kgh.png
+    - assets/screen/images/ellipse-95-EZK.png
+    - assets/screen/images/bold-document-LeH.png
+    - assets/screen/images/ellipse-97.png
+    - assets/screen/images/frame-gub.png
+    - assets/screen/images/rectangle-33-dJ5.png
+    - assets/screen/images/rectangle-23-PE5.png
+    - assets/screen/images/group-6-8f7.png
+    - assets/screen/images/bold-document-qFK.png
+    - assets/screen/images/ellipse-94-ycy.png
+    - assets/screen/images/auto-group-wnjx.png
+    - assets/screen/images/ellipse-95-tSR.png
+    - assets/screen/images/bold-document-853.png
+    - assets/screen/images/ellipse-95-VVo.png
+    - assets/screen/images/frame-twF.png
+    - assets/screen/images/auto-group-ocuu.png
+    - assets/screen/images/ellipse-95-gxu.png
+    - assets/screen/images/group-6-pEy.png
+    - assets/screen/images/vector-kGd.png
+    - assets/screen/images/frame-K2D.png
+    - assets/screen/images/vector-wxh.png
+    - assets/screen/images/bold-discount-bA5.png
+    - assets/screen/images/frame-xg5.png
+    - assets/screen/images/frame-kER.png
+    - assets/screen/images/bold-discount-kdj.png
+    - assets/screen/images/bold-discount-iKf.png
+    - assets/screen/images/rectangle-23-sCZ.png
+    - assets/screen/images/ellipse-94-fL1.png
+    - assets/screen/images/ellipse-94-1uf.png
+    - assets/screen/images/vector-n9j.png
+    - assets/screen/images/frame-Lww.png
+    - assets/screen/images/bold-discount-o57.png
+    - assets/screen/images/bold-discount-bVP.png
+    - assets/screen/images/section-best-seller.png
+    - assets/screen/images/bold-document-a6H.png
+    - assets/screen/images/bold-document-EXX.png
+    - assets/screen/images/kwetiau-goreng-1.png
+    - assets/screen/images/auto-group-agq5.png
+    - assets/screen/images/auto-group-qxqt.png
+    - assets/screen/images/bold-document-d3s.png
+    - assets/screen/images/bold-discount-xrq.png
+    - assets/screen/images/bold-discount-KhP.png
+    - assets/screen/images/rectangle-23-Zss.png
+    - assets/screen/images/ellipse-94-7Pb.png
+    - assets/screen/images/vector-7mF.png
+    - assets/screen/images/auto-group-yhrm.png
+    - assets/screen/images/bold-document-9qw.png
+    - assets/screen/images/auto-group-g6j9.png
+    - assets/screen/images/frame-try.png
+    - assets/screen/images/auto-group-sk6v.png
+    - assets/screen/images/auto-group-hvzo.png
+    - assets/screen/images/vector-64D.png
+    - assets/screen/images/bold-document-geH.png
+    - assets/screen/images/bold-document-sEm.png
+    - assets/screen/images/bold-discount-We9.png
+    - assets/screen/images/ellipse-98.png
+    - assets/screen/images/auto-group-wpob.png
+    - assets/screen/images/ep-arrow-down.png
+    - assets/screen/images/frame-1t9.png
+    - assets/screen/images/frame-G6H.png
+    - assets/screen/images/frame-WZb.png
+    - assets/screen/images/frame-ypR.png
+    - assets/screen/images/bold-document-hfs.png
+    - assets/screen/images/icon-arrow-left-rE9.png
+    - assets/screen/images/ellipse-94-Scu.png
+    - assets/screen/images/bold-discount-aj7.png
+    - assets/screen/images/bold-document-B8Z.png
+    - assets/screen/images/auto-group-hbuo.png
+    - assets/screen/images/bold-discount-JtD.png
+    - assets/screen/images/rectangle-23-DGR.png
+    - assets/screen/images/vector-u9o.png
+    - assets/screen/images/bold-document-xLm.png
+    - assets/screen/images/vector-5.png
+    - assets/screen/images/image-2.png
+    - assets/screen/images/ellipse-95-7oK.png
+    - assets/screen/images/vector-6.png
+    - assets/screen/images/auto-group-2np7.png
+    - assets/screen/images/rectangle-23-nDs.png
+    - assets/screen/images/vector-5-jv5.png
+    - assets/screen/images/vector-5-h1X.png
+    - assets/screen/images/vector-JT7.png
+    - assets/screen/images/vector-6-rFF.png
+    - assets/screen/images/auto-group-wfqy.png
+    - assets/screen/images/vector-6-xff.png
+    - assets/screen/images/frame-6ay.png
+    - assets/screen/images/bold-discount-KDf.png
+    - assets/screen/images/vector-Sj7.png
+    - assets/screen/images/image-3.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
