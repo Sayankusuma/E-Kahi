@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/screen/keranjang.dart';
+import 'package:myapp/screen/menu-profil-.dart';
 // import 'package:flutter/gestures.dart';
 // import 'dart:ui';
 // import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +26,7 @@ import 'package:myapp/screen/menu-promo.dart';
 // import 'package:myapp/screen/byr-emoney.dart';
 // import 'package:myapp/screen/byr-tunai.dart';
 // import 'package:myapp/screen/keranjang.dart';
-// import 'package:myapp/screen/menu-profil-.dart';
+// import 'package:myapp/screen/menu-profil-.dart';`
 import 'package:myapp/screen/metode-top-up.dart';
 // import 'package:myapp/screen/edit-chat-qmF.dart';
 // import 'package:myapp/screen/bukti-pembayaran.dart';
@@ -45,15 +46,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/keranjang',
+      initialRoute: '/menuProfil',
       routes: {
         '/onboarding': (context) => OnboardingPage(),
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignUpPage(),
-        '/home': (context) => HomePage(),
+        '/home': (context) => MyHome(),
         '/metodeTopup': (context) => MetodeTopupPage(),
         '/menuPromo': (context) => MenuPromoPage(),
         '/keranjang': (context) => KeranjangPage(),
+        '/menuProfil': (context) => MenuProfilPage()
       },
       // home: Scaffold(
       //   body: SingleChildScrollView(
