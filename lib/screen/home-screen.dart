@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
+// import 'package:flutter/gestures.dart';
+// import 'dart:ui';
 // import 'package:google_fonts/google_fonts.dart';
 // import 'package:myapp/utils.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomePage(),
+    );
+  }
+}
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,6 +24,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final GlobalKey<ScaffoldState> _menuDrawer = GlobalKey<ScaffoldState>();
+//   final ScrollController _scrollController = ScrollController();
   
   void _openDrawer() {
     _menuDrawer.currentState!.openDrawer();
@@ -21,23 +35,40 @@ class _HomePageState extends State<HomePage> {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     
-    return Scaffold(
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Scaffold(
       key: _menuDrawer,
       drawer: Drawer(
+//         height: screenHeight,
+        width: screenWidth * 0.65,
+//         shape: null,
+        child: Container(
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.only(
+        topRight: Radius.circular(0), // Mengatur sudut siku pada bagian atas kanan
+        bottomRight: Radius.circular(0), // Mengatur sudut siku pada bagian bawah kanan
+      ),
+    ),
         child: ListView(
+//           height: screenHeight,
+//         width: screenWidth * 0.5,
           padding: EdgeInsets.zero,
           children: [
             SizedBox(
-              height: 80,
+              height: screenHeight * 0.1,
+//               width: screenWidth * 0.5,
               child: DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.purple,
+                  color: Color(0xff1b4965),
                 ),
                 child: Text(
                   'Menu',
                   style: TextStyle(
-                    color: Colors.pink,
+                    color: Color(0xffffffff),
                     fontSize: 20,
                   ),
                 ),
@@ -60,171 +91,183 @@ class _HomePageState extends State<HomePage> {
             // konten lain
           ],
         ),
+          ),
       ),
       body: Container(
-      width: double.infinity,
-      child: Container(
-        // homescreenKxh (1:16)
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Color(0xffffffff),
-        ),
+        height: screenHeight,
+        width: screenWidth,
+//       width: double.infinity,
+//       child: Container(
+//         // homescreenKxh (1:16)
+//         width: double.infinity,
+//         decoration: BoxDecoration(
+//           color: Color(0xffffffff),
+//         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              // autogroupjfthyfs (5yHCpFH1Q8hZ1uyKGRjfth)
-              width: double.infinity,
-              height: 100 * fem,
-              child: Stack(
+              // statusbarKMP (120:184)
+              padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+              width: screenWidth,
+              height: screenHeight * 0.1,
+              decoration: BoxDecoration (
+                color: Color(0xff1b4965),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Positioned(
-                    // profileriy (1:56)
-                    left: 336 * fem,
-                    top: 41.9299316406 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 38 * fem,
-                        height: 37 * fem,
-                        child: Image.asset(
-                          'assets/screen/images/profile.png',
-                          width: 38 * fem,
-                          height: 37 * fem,
+                  Center(
+                    // autogroupjfthyfs (5yHCpFH1Q8hZ1uyKGRjfth)
+//                     width: screenWidth * 0.5,
+//                     height: screenHeight * 0.25,
+//                     padding: EdgeInsets.fromLTRB(10*fem, 0*fem, 10*fem, 0*fem),
+//                     width: screenWidth,
+//                     height: screenHeight * 0.125,
+                    child: Stack(
+                      children: [
+                        Container(
+                          width: screenWidth * 0.25,
+//                           height: screenHeight * 0.25,
+//                           margin: EdgeInsets.fromLTRB(screenWidth * 0.125, 0 * fem, 0, 0 * fem),
+                          margin: EdgeInsets.fromLTRB(0, 0 * fem, 0, 0 * fem),
+                        child: ElevatedButton(
+      //                     icon: const Icon(Icons.menu),
+                          // profileriy (1:56)
+                          onPressed: _openDrawer,
+                          style: ElevatedButton.styleFrom(
+//                             padding: EdgeInsets.fromLTRB(5 * fem, 2.5 * fem, 5 * fem, 2.5 * fem),
+      //                       shape: RoundedRectangleBorder(
+      //                         borderRadius: BorderRadius.circular(15),
+      //                       ),
+      //                       elevation: 0,
+                            backgroundColor: const Color(0xff1b4965),
+                            fixedSize: Size(38 * fem, 37 * fem),
+                          ),
+      //                     child: Align(
+                          child: SizedBox(
+                            width: 38 * fem,
+                            height: 37 * fem,
+                            child: Image.asset(
+                              'assets/screen/images/profile.png',
+                              width: 38 * fem,
+                              height: 37 * fem,
+                            ),
+                          ),
+      //                     ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
-                  Positioned(
-                    // statusbarLu3 (120:184)
-                    left: 0 * fem,
-                    top: 0 * fem,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(
-                          25 * fem, 0 * fem, 26 * fem, 0 * fem),
-                      width: 390 * fem,
-                      height: 100 * fem,
-                      decoration: BoxDecoration(
-                        color: Color(0xff1b4965),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // autogroupep2qEUd (5yHDZUXygHzqxBa9Ppep2q)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 15 * fem, 37 * fem, 0 * fem),
-                            width: 38 * fem,
-                            height: 51 * fem,
-                            child: Image.asset(
-                              'assets/screen/images/auto-group-ep2q.png',
-                              width: 38 * fem,
-                              height: 51 * fem,
-                            ),
-                          ),
-                          Container(
-                            // autogroupfyudjwB (5yHDftWxXdNQdyMmUifYUd)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 32 * fem, 0 * fem),
-                            width: 204 * fem,
-                            height: double.infinity,
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  // frame54fK3 (120:200)
-                                  left: 104 * fem,
-                                  top: 0 * fem,
-                                  child: Container(
-                                    width: 100 * fem,
-                                    height: 100 * fem,
+                  Container(
+                    // autogroupqxaqEcm (TExsihoiaHF8W5V7M8QxAq)
+                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                    width: screenWidth * 0.5,
+//                     height: screenHeight * 0.0125,
+                    child: 
+//                         Positioned(
+//                           // frame54MSV (120:200)
+//                           left: 55*fem,
+//                           top: 0*fem,
+//                           child: Container(
+//                             width: 100*fem,
+//                             height: 100*fem,
+//                           ),
+//                         ),
+                        Positioned(
+                          // ekahi69B (594:138)
+                          left: 0*fem,
+//                           top: 35.5*fem,
+                          child: Center(
+                            child: Align(
+                              child: SizedBox(
+                                width: screenWidth * 0.5,
+                                height: 30*fem,
+                                child: Text(
+                                  'e - Kahi',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle (
+                                    fontFamily: 'Inter',
+                                    fontSize: 24*ffem,
+                                    fontWeight: FontWeight.w700,
+//                                     height: screenHeight * 0.05,
+                                    letterSpacing: 2*fem,
+                                    color: Color(0xffffffff),
                                   ),
                                 ),
-                                Positioned(
-                                  // rectangle18zcD (120:949)
-                                  left: 0 * fem,
-                                  top: 32 * fem,
-                                  child: Align(
-                                    child: SizedBox(
-                                      width: 190 * fem,
-                                      height: 37 * fem,
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(50 * fem),
-                                          color: Color(0xffd9d9d9),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  // rp1000000069T (120:952)
-                                  left: 23 * fem,
-                                  top: 45 * fem,
-                                  child: Align(
-                                    child: SizedBox(
-                                      width: 145 * fem,
-                                      height: 14 * fem,
-                                      child: Text(
-                                        'RP. 10000000',
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontSize: 20 * ffem,
-                                          fontWeight: FontWeight.w700,
-                                          height: 0.7 * ffem / fem,
-                                          letterSpacing: 0.2 * fem,
-                                          color: Color(0xff000000),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
+                              ),
                             ),
                           ),
-                          Container(
-                            // autogroup4h6da4d (5yHDkiiEzF413vBh2H4h6d)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 21 * fem, 0 * fem, 0 * fem),
-                            width: 28 * fem,
-                            height: 49 * fem,
-                            child: Image.asset(
-                              'assets/screen/images/auto-group-4h6d.png',
-                              width: 28 * fem,
-                              height: 49 * fem,
-                            ),
-                          ),
-                        ],
-                      ),
+                        
                     ),
+                  ),
+                  Container(
+                    // autogroup7k1pML1 (TExsnY2fdPYXo4y7pA7K1P)
+//                     margin: EdgeInsets.fromLTRB(0, 0 * fem, screenWidth * 0.1, 0 * fem),
+                    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0, 0 * fem),
+                    width: screenWidth * 0.25,
+                    child: ElevatedButton(
+//                     icon: const Icon(Icons.menu),
+                    // profileriy (1:56)
+                    onPressed: () {
+                      
+                    },
+                    style: ElevatedButton.styleFrom(
+//                       padding: EdgeInsets.fromLTRB(5 * fem, 2.5 * fem, 5 * fem, 2.5 * fem),
+//                       shape: RoundedRectangleBorder(
+//                         borderRadius: BorderRadius.circular(15),
+//                       ),
+//                       elevation: 0,
+                      backgroundColor: const Color(0xff1b4965),
+                        fixedSize: Size(28 * fem, 49 * fem),
+                    ),
+//                     child: Align(
+                      child: SizedBox(
+                        width: 28 * fem,
+                        height: 49 * fem,
+                        child: Image.asset(
+                          'assets/screen/images/auto-group-7k1p.png',
+                          width: 28 * fem,
+                          height: 49 * fem,
+                        ),
+                      ),
+//                     ),
+                  ),
+                    
                   ),
                 ],
               ),
             ),
-            Container(
+            
+            // choose your toko
+            Center(
+            child: Container(
               // autogrouphjp1VSV (5yHE18Tu5dV6hLidjQhjp1)
-              padding:
-                  EdgeInsets.fromLTRB(24 * fem, 36 * fem, 19 * fem, 36 * fem),
-              width: double.infinity,
+              height: screenHeight * 0.8,
+              padding: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 0 * fem),
+              width: screenWidth,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     // sectionrestosnearmepDs (120:329)
-                    margin: EdgeInsets.fromLTRB(
-                        64 * fem, 0 * fem, 77 * fem, 52 * fem),
-                    padding: EdgeInsets.fromLTRB(
-                        16 * fem, 23 * fem, 16.84 * fem, 22 * fem),
-                    width: double.infinity,
+//                     height BENERIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNNNNNNNNNNNNN
+                    height: 0.09 * screenHeight,
+                    width: screenWidth * 0.5,
+                    margin: EdgeInsets.fromLTRB(64 * fem, 10 * fem, 64 * fem, 15 * fem),
+                    padding: EdgeInsets.fromLTRB(16 * fem, 23 * fem, 16 * fem, 23 * fem),
+//                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xffffffff),
                       borderRadius: BorderRadius.circular(16 * fem),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x26000000),
-                          offset: Offset(0 * fem, 1 * fem),
-                          blurRadius: 2 * fem,
-                        ),
-                      ],
+//                       boxShadow: [
+//                         BoxShadow(
+//                           color: Color(0x26000000),
+//                           offset: Offset(0 * fem, 1 * fem),
+//                           blurRadius: 2 * fem,
+//                         ),
+//                       ],
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -232,7 +275,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           // chooseyourtokoGrZ (120:330)
                           margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 29.16 * fem, 0 * fem),
+                              9.5 * fem, 0.5 * fem, 0 * fem, 0 * fem),
                           child: Text(
                             'CHOOSE YOUR TOKO',
                             style: TextStyle(
@@ -245,10 +288,11 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
+                        SizedBox(width: 17 * fem),
                         Container(
                           // group6ABF (120:331)
                           margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 0.5 * fem),
+                              0 * fem, 0 * fem, 7 * fem, 0 * fem),
                           width: 16 * fem,
                           height: 13.67 * fem,
                           child: Image.asset(
@@ -260,299 +304,176 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  ListView(
-                    children: [
-                      Container(
-                        // group64GEH (120:970)
-                        margin: EdgeInsets.fromLTRB(1 * fem, 0 * fem, 0 * fem, 7 * fem),
-                        width: 346 * fem,
-                        height: 154 * fem,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16 * fem),
-                        ),
-                        child: ElevatedButton(
-                          // group61nyK (120:954)
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/menutoko');
-                          },
-                          style: ElevatedButton.styleFrom(
-                            // width: double.infinity,
-                            // height: double.infinity,
-                            primary: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16 * fem),
-                            ),
-                            elevation: 4 * fem,
-                          ),
-                          child: Padding(
-                            // sectionbestsellerYxV (1:185)
-                            padding: EdgeInsets.fromLTRB(
-                                9 * fem, 7 * fem, 56 * fem, 7 * fem),
-                            // width: double.infinity,
-                            // height: double.infinity,
-                            // decoration: BoxDecoration(
-                            //   color: Color(0xffffffff),
-                            //   borderRadius: BorderRadius.circular(16 * fem),
-                            //   boxShadow: [
-                            //     BoxShadow(
-                            //       color: Color(0x26000000),
-                            //       offset: Offset(0 * fem, 1 * fem),
-                            //       blurRadius: 2 * fem,
-                            //     ),
-                            //   ],
-                            // ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  // rectangle33EqK (227:152)
-                                  margin: EdgeInsets.fromLTRB(
-                                      0 * fem, 0 * fem, 55 * fem, 0 * fem),
-                                  width: 145 * fem,
-                                  height: 140 * fem,
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(16 * fem),
-                                    child: Image.asset(
-                                      'assets/screen/images/rectangle-33.png',
-                                      fit: BoxFit.cover,
+                  SizedBox(
+                    height: screenHeight * 0.675,
+//                     width: screenWidth * 0.9,
+                    child: CustomScrollView(
+                      slivers: <Widget>[
+                        SliverList(
+                          delegate: SliverChildBuilderDelegate(
+                            (BuildContext context, int index) {
+                              return Center(
+                                    // group64GEH (120:970)
+//                                     margin: EdgeInsets.fromLTRB(5 * fem, 1 * fem, 0 * fem, 5 * fem),
+//                                 decoration: BoxDecoration(
+//                                   borderRadius: BorderRadius.circular(16 * fem),
+//                                   color: const Color(0xffffffff),
+//                                   boxShadow: [
+//                                     BoxShadow(
+//                                       color: const Color(0x26000000),
+//                                       offset: Offset(0 * fem, 1 * fem),
+//                                       blurRadius: 2 * fem,
+//                                     ),
+//                                   ],
+//                                 ),
+                                child: ListTile(
+                                    subtitle: ElevatedButton(
+                                      // group61nyK (120:954)
+                                      onPressed: () {
+                                        Navigator.pushNamed(context, '/menutoko');
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        // width: double.infinity,
+                                        // height: double.infinity,
+                                        primary: Colors.white,
+//                                         color: const Color(0xffffffff),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(16 * fem),
+//                                           boxShadow: [
+//                                             BoxShadow(
+//                                               color: const Color(0x26000000),
+//                                               offset: Offset(0 * fem, 1 * fem),
+//                                               blurRadius: 2 * fem,
+//                                             ),
+//                                           ],
+                                        ),
+                                        elevation: 4 * fem,
+                                        fixedSize: Size(screenWidth * 0.8, screenHeight * 0.225),
+                                      ),
+                                      child: Container(
+                                        // sectionbestsellerYxV (1:185)
+//                                         padding: EdgeInsets.fromLTRB(9 * fem, 7 * fem, 56 * fem, 7 * fem),
+//                                         decoration: BoxDecoration(
+//                                           borderRadius: BorderRadius.circular(16 * fem),
+//                                           color: const Color(0xffffffff),
+//                                           boxShadow: [
+//                                             BoxShadow(
+//                                               color: const Color(0x26000000),
+//                                               offset: Offset(0 * fem, 1 * fem),
+//                                               blurRadius: 2 * fem,
+//                                             ),
+//                                           ],
+//                                         ),
+                                        // width: double.infinity,
+                                        // height: double.infinity,
+                                        // decoration: BoxDecoration(
+                                        //   color: Color(0xffffffff),
+                                        //   borderRadius: BorderRadius.circular(16 * fem),
+                                        //   boxShadow: [
+                                        //     BoxShadow(
+                                        //       color: Color(0x26000000),
+                                        //       offset: Offset(0 * fem, 1 * fem),
+                                        //       blurRadius: 2 * fem,
+                                        //     ),
+                                        //   ],
+                                        // ),
+                                        child: Row(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          children: [
+                                            Container(
+                                              // rectangle33EqK (227:152)
+                                              margin: EdgeInsets.all(screenWidth * 0.0005),
+                                              width: screenWidth * 0.38,
+                                              height: screenHeight * 0.175,
+                                              child: ClipRRect(
+                                                borderRadius: BorderRadius.circular(16 * fem),
+                                                child: Image.asset(
+                                                  'assets/screen/images/rectangle-33.png',
+//                                                   width: screenWidth * 0.4,
+//                                                   height: screenHeight * 0.15,
+//                                                   fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(width: screenWidth * 0.1),
+                                            Container(
+                                              // tokobundaYLD (120:335)
+                                              margin: EdgeInsets.fromLTRB(
+                                                  0 * fem, 0 * fem, 0 * fem, 0 * fem),
+                                              child: Text(
+                                                'TOKO BUNDA',
+                                                style: TextStyle(
+                                                  fontFamily: 'Inter',
+                                                  fontSize: 12 * ffem,
+                                                  fontWeight: FontWeight.w700,
+                                                  height: 1.2125 * ffem / fem,
+                                                  letterSpacing: 0.12 * fem,
+                                                  color: Color(0xff1d1d1d),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Container(
-                                  // tokobundaYLD (120:335)
-                                  margin: EdgeInsets.fromLTRB(
-                                      0 * fem, 0 * fem, 0 * fem, 3 * fem),
-                                  child: Text(
-                                    'TOKO BUNDA',
-                                    style: TextStyle(
-                                      fontFamily: 'Inter',
-                                      fontSize: 12 * ffem,
-                                      fontWeight: FontWeight.w700,
-                                      height: 1.2125 * ffem / fem,
-                                      letterSpacing: 0.12 * fem,
-                                      color: Color(0xff1d1d1d),
-                                    ),
-                                  ),
-                                ),
-                              ],
+                                );
+                              },
                             ),
                           ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  // Container(
-                  //   // group65x93 (146:155)
-                  //   margin:
-                  //       EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 9 * fem),
-                  //   width: double.infinity,
-                  //   height: 155 * fem,
-                  //   decoration: BoxDecoration(
-                  //     borderRadius: BorderRadius.circular(16 * fem),
-                  //   ),
-                  //   child: Container(
-                  //     // group615jT (146:156)
-                  //     width: double.infinity,
-                  //     height: double.infinity,
-                  //     decoration: BoxDecoration(
-                  //       borderRadius: BorderRadius.circular(16 * fem),
-                  //     ),
-                  //     child: Container(
-                  //       // sectionbestsellerSK7 (146:157)
-                  //       padding: EdgeInsets.fromLTRB(
-                  //           9 * fem, 7 * fem, 63.81 * fem, 8 * fem),
-                  //       width: double.infinity,
-                  //       height: double.infinity,
-                  //       decoration: BoxDecoration(
-                  //         color: Color(0xffffffff),
-                  //         borderRadius: BorderRadius.circular(16 * fem),
-                  //         boxShadow: [
-                  //           BoxShadow(
-                  //             color: Color(0x26000000),
-                  //             offset: Offset(0 * fem, 1 * fem),
-                  //             blurRadius: 2 * fem,
-                  //           ),
-                  //         ],
-                  //       ),
-                  //       child: Row(
-                  //         crossAxisAlignment: CrossAxisAlignment.center,
-                  //         children: [
-                  //           Container(
-                  //             // rectangle33vEH (227:154)
-                  //             margin: EdgeInsets.fromLTRB(
-                  //                 0 * fem, 0 * fem, 55.19 * fem, 0 * fem),
-                  //             width: 145 * fem,
-                  //             height: 140 * fem,
-                  //             child: ClipRRect(
-                  //               borderRadius: BorderRadius.circular(16 * fem),
-                  //               child: Image.asset(
-                  //                 'assets/screen/images/rectangle-33-4SH.png',
-                  //                 fit: BoxFit.cover,
-                  //               ),
-                  //             ),
-                  //           ),
-                  //           Container(
-                  //             // tokopapih2o7 (146:158)
-                  //             margin: EdgeInsets.fromLTRB(
-                  //                 0 * fem, 0 * fem, 0 * fem, 1 * fem),
-                  //             child: Text(
-                  //               'TOKO PAPIH',
-                  //               style: TextStyle(
-                  //                 fontFamily: 'Inter',
-                  //                 fontSize: 12 * ffem,
-                  //                 fontWeight: FontWeight.w700,
-                  //                 height: 1.2125 * ffem / fem,
-                  //                 letterSpacing: 0.12 * fem,
-                  //                 color: Color(0xff1d1d1d),
-                  //               ),
-                  //             ),
-                  //           ),
-                  //         ],
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                  // Container(
-                  //   // group64YmT (146:163)
-                  //   margin:
-                  //       EdgeInsets.fromLTRB(1 * fem, 0 * fem, 0 * fem, 0 * fem),
-                  //   width: 346 * fem,
-                  //   height: 155 * fem,
-                  //   decoration: BoxDecoration(
-                  //     borderRadius: BorderRadius.circular(16 * fem),
-                  //   ),
-                  //   child: Container(
-                  //     // group6162H (146:164)
-                  //     width: double.infinity,
-                  //     height: double.infinity,
-                  //     decoration: BoxDecoration(
-                  //       borderRadius: BorderRadius.circular(16 * fem),
-                  //     ),
-                  //     child: Container(
-                  //       // sectionbestsellerrGM (146:165)
-                  //       padding: EdgeInsets.fromLTRB(
-                  //           9 * fem, 8 * fem, 48 * fem, 7 * fem),
-                  //       width: double.infinity,
-                  //       height: double.infinity,
-                  //       decoration: BoxDecoration(
-                  //         color: Color(0xffffffff),
-                  //         borderRadius: BorderRadius.circular(16 * fem),
-                  //         boxShadow: [
-                  //           BoxShadow(
-                  //             color: Color(0x26000000),
-                  //             offset: Offset(0 * fem, 1 * fem),
-                  //             blurRadius: 2 * fem,
-                  //           ),
-                  //         ],
-                  //       ),
-                  //       child: Row(
-                  //         crossAxisAlignment: CrossAxisAlignment.center,
-                  //         children: [
-                  //           Container(
-                  //             // rectangle33Yus (227:156)
-                  //             margin: EdgeInsets.fromLTRB(
-                  //                 0 * fem, 0 * fem, 54 * fem, 0 * fem),
-                  //             width: 145 * fem,
-                  //             height: 140 * fem,
-                  //             child: ClipRRect(
-                  //               borderRadius: BorderRadius.circular(16 * fem),
-                  //               child: Image.asset(
-                  //                 'assets/screen/images/rectangle-33-JA9.png',
-                  //                 fit: BoxFit.cover,
-                  //               ),
-                  //             ),
-                  //           ),
-                  //           Container(
-                  //             // tokoibuyumfzV (146:166)
-                  //             margin: EdgeInsets.fromLTRB(
-                  //                 0 * fem, 0 * fem, 0 * fem, 15 * fem),
-                  //             child: Text(
-                  //               ' TOKO IBU YUM',
-                  //               style: TextStyle(
-                  //                 fontFamily: 'Inter',
-                  //                 fontSize: 12 * ffem,
-                  //                 fontWeight: FontWeight.w700,
-                  //                 height: 1.2125 * ffem / fem,
-                  //                 letterSpacing: 0.12 * fem,
-                  //                 color: Color(0xff1d1d1d),
-                  //               ),
-                  //             ),
-                  //           ),
-                  //         ],
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                ],
-              ),
-            ),
-            Container(
-              // navbarnJR (1:17)
-              width: double.infinity,
-              height: 80 * fem,
-              decoration: BoxDecoration(
-                color: Color(0xffffffff),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0x26000000),
-                    offset: Offset(0 * fem, -1 * fem),
-                    blurRadius: 2 * fem,
-                  ),
-                ],
-              ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    // rectangle17u89 (1:18)
-                    left: 6 * fem,
-                    // top: 0 * fem,
-                    bottom: 0,
-                    child: Align(
-                      child: SizedBox(
-                        width: 94 * fem,
-                        height: 4 * fem,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xff3d872a),
-                            borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(20 * fem),
-                              bottomLeft: Radius.circular(20 * fem),
-                            ),
-                          ),
-                        ),
+                        ],
                       ),
                     ),
-                  ),
-                  Positioned(
-                    // homePZ7 (1:19)
-                    left: 35 * fem,
-                    // top: 19 * fem,
-                    bottom: 19 * fem,
-                    child: InkWell(
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 0 * fem, 0, 0),
+              child: Container(
+                height: screenHeight * 0.1,
+//                 width: 90,
+                width: screenWidth,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 1,
+                      blurRadius: 5,
+                      offset: Offset(0, -1),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
                       onTap: () {
-                        // takde
+                        Navigator.pop(context);
                       },
                       child: Container(
-                        padding: EdgeInsets.fromLTRB(
-                            0 * fem, 2.25 * fem, 0 * fem, 0 * fem),
-                        width: 35 * fem,
-                        height: 60 * fem,
+                        // homePn5 (416:1180)
+                        margin: EdgeInsets.fromLTRB(0 * fem, 15 * fem, 0 * fem, 15 * fem),
+                        width: screenWidth * 0.235,
+                        padding: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 0 * fem),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          crossAxisAlignment:
+                              CrossAxisAlignment.center,
                           children: [
                             Container(
-                              // frameJRB (1:20)
-                              margin: EdgeInsets.only(bottom: 7 * fem),
+                              // framevX7 (416:1181)
+                              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 7 * fem),
                               width: 18 * fem,
                               height: 18.75 * fem,
                               child: Image.asset(
-                                'assets/screen/images/frame-ky3.png',
+                                'assets/screen/images/frame-C4d.png',
                                 width: 18 * fem,
                                 height: 18.75 * fem,
                               ),
                             ),
                             Text(
-                              // homeRkh (1:22)
+                              // homeFZP (416:1183)
                               'Home',
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -561,353 +482,145 @@ class _HomePageState extends State<HomePage> {
                                 fontWeight: FontWeight.w700,
                                 height: 1.2125 * ffem / fem,
                                 letterSpacing: 0.12 * fem,
-                                color: Color(0xff464948),
+                                color: const Color(0xff464948),
                               ),
                             ),
                           ],
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    // promosATP (1:23)
-                    left: 126 * fem,
-                    top: 21.4609069824 * fem,
-                    child: Container(
-                      width: 44 * fem,
-                      height: 40.54 * fem,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // bolddiscountHnu (1:24)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 6.46 * fem),
-                            width: 19.08 * fem,
-                            height: 19.08 * fem,
-                            child: Image.asset(
-                              'assets/screen/images/bold-discount-ijX.png',
+                    GestureDetector(
+                      onTap: () {
+                        
+                      },
+                      child: Container(
+                        // promosaLm (416:1184)
+//                         margin: EdgeInsets.fromLTRB(0 * fem, 2.46 * fem, 52 * fem, 0 * fem),
+                        margin: EdgeInsets.fromLTRB(0 * fem, 15 * fem, 0 * fem, 15 * fem),
+                        width: screenWidth * 0.235,
+                        child: Column(
+                          crossAxisAlignment:
+                              CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              // bolddiscount7bb (416:1185)
+                              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 7 * fem),
                               width: 19.08 * fem,
                               height: 19.08 * fem,
+                              child: Image.asset(
+                                'assets/screen/images/bold-discount-Y5j.png',
+                                width: 19.08 * fem,
+                                height: 19.08 * fem,
+                              ),
                             ),
-                          ),
-                          Text(
-                            // promosp29 (1:25)
-                            'Promos',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 12 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2125 * ffem / fem,
-                              letterSpacing: 0.12 * fem,
-                              color: Color(0xff464948),
+                            Text(
+                              // promospW1 (416:1186)
+                              'Promo',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 12 * ffem,
+                                fontWeight: FontWeight.w400,
+                                height: 1.2125 * ffem / fem,
+                                letterSpacing: 0.12 * fem,
+                                color: const Color(0xff464948),
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    // orders9q7 (1:26)
-                    left: 222 * fem,
-                    // top: 21 * fem,
-                    bottom: 21 * fem,
-                    child: Container(
-                      width: 40 * fem,
-                      height: 41 * fem,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // bolddocumentVPB (1:27)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 6 * fem),
-                            width: 18 * fem,
-                            height: 20 * fem,
-                            child: Image.asset(
-                              'assets/screen/images/bold-document-8Ld.png',
-                              width: 18 * fem,
-                              height: 20 * fem,
-                            ),
-                          ),
-                          Text(
-                            // orders1sK (1:28)
-                            'Orders',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 12 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2125 * ffem / fem,
-                              letterSpacing: 0.12 * fem,
-                              color: Color(0xff464948),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    // chatZ89 (1:29)
-                    left: 323 * fem,
-                    // top: 21 * fem,
-                    bottom: 21 * fem,
-                    child: Container(
-                      width: 28 * fem,
-                      height: 41 * fem,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // autogroupwz1b6Ny (5yHEuMTt1ME7iCQhZZwz1B)
-                            margin: EdgeInsets.fromLTRB(
-                                1.88 * fem, 0 * fem, 0 * fem, 7.32 * fem),
-                            width: 21.12 * fem,
-                            height: 18.68 * fem,
-                            child: Image.asset(
-                              'assets/screen/images/auto-group-wz1b.png',
-                              width: 21.12 * fem,
-                              height: 18.68 * fem,
-                            ),
-                          ),
-                          Text(
-                            // chatCgu (1:31)
-                            'Chat',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 12 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2125 * ffem / fem,
-                              letterSpacing: 0.12 * fem,
-                              color: Color(0xff464948),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    // homeindicator96M (1:34)
-                    left: 128 * fem,
-                    top: 67 * fem,
-                    child: Align(
-                      child: SizedBox(
-                        width: 134 * fem,
-                        height: 5 * fem,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100 * fem),
-                            color: Color(0xff000000),
-                          ),
+                          ],
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    // navbareJ1 (120:166)
-                    left: 0 * fem,
-                    top: 0 * fem,
-                    child: Container(
-                      width: 390 * fem,
-                      height: 80 * fem,
-                      decoration: BoxDecoration(
-                        color: Color(0xffffffff),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x26000000),
-                            offset: Offset(0 * fem, -1 * fem),
-                            blurRadius: 2 * fem,
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            // rectangle177Bb (120:167)
-                            margin: EdgeInsets.fromLTRB(
-                                6 * fem, 0 * fem, 0 * fem, 15 * fem),
-                            width: 94 * fem,
-                            height: 4 * fem,
-                            decoration: BoxDecoration(
-                              color: Color(0xff1b4965),
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(20 * fem),
-                                bottomLeft: Radius.circular(20 * fem),
+                    GestureDetector(
+                      onTap: () {
+                        
+                      },
+                      child: Container(
+                        // ordersZTb (416:1187)
+//                         margin: EdgeInsets.fromLTRB(0 * fem, 2 * fem, 60.5 * fem, 0 * fem),
+                        margin: EdgeInsets.fromLTRB(0 * fem, 15 * fem, 0 * fem, 15 * fem),
+                        width: screenWidth * 0.235,
+                        child: Column(
+                          crossAxisAlignment:
+                              CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              // bolddocument6iR (416:1188)
+                              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 7 * fem),
+                              width: 18 * fem,
+                              height: 20 * fem,
+                              child: Image.asset(
+                                'assets/screen/images/bold-document-nJy.png',
+                                width: 18 * fem,
+                                height: 20 * fem,
                               ),
                             ),
-                          ),
-                          Container(
-                            // autogroupbt9fQwP (5yHF7mGsHitq7iFp7eBT9f)
-                            padding: EdgeInsets.fromLTRB(
-                                35 * fem, 0 * fem, 37.5 * fem, 0 * fem),
-                            width: double.infinity,
-                            height: 61 * fem,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  // homeLKF (120:168)
-                                  margin: EdgeInsets.fromLTRB(
-                                      0 * fem, 0 * fem, 56 * fem, 0 * fem),
-                                  padding: EdgeInsets.fromLTRB(
-                                      0 * fem, 2.25 * fem, 0 * fem, 0 * fem),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        // frameroP (120:169)
-                                        margin: EdgeInsets.fromLTRB(
-                                            0 * fem, 0 * fem, 0 * fem, 7 * fem),
-                                        width: 18 * fem,
-                                        height: 18.75 * fem,
-                                        child: Image.asset(
-                                          'assets/screen/images/frame-nnq.png',
-                                          width: 18 * fem,
-                                          height: 18.75 * fem,
-                                        ),
-                                      ),
-                                      Text(
-                                        // homeAJH (120:171)
-                                        'Home',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontSize: 12 * ffem,
-                                          fontWeight: FontWeight.w700,
-                                          height: 1.2125 * ffem / fem,
-                                          letterSpacing: 0.12 * fem,
-                                          color: Color(0xff464948),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  // promos6hj (120:172)
-                                  margin: EdgeInsets.fromLTRB(
-                                      0 * fem, 2.46 * fem, 52 * fem, 0 * fem),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        // bolddiscountEow (120:173)
-                                        margin: EdgeInsets.fromLTRB(0 * fem,
-                                            0 * fem, 0 * fem, 6.46 * fem),
-                                        width: 19.08 * fem,
-                                        height: 19.08 * fem,
-                                        child: Image.asset(
-                                          'assets/screen/images/bold-discount-sxh.png',
-                                          width: 19.08 * fem,
-                                          height: 19.08 * fem,
-                                        ),
-                                      ),
-                                      Text(
-                                        // promosk1b (120:174)
-                                        'Promos',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontSize: 12 * ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.2125 * ffem / fem,
-                                          letterSpacing: 0.12 * fem,
-                                          color: Color(0xff464948),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  // orderssru (120:175)
-                                  margin: EdgeInsets.fromLTRB(
-                                      0 * fem, 2 * fem, 60.5 * fem, 0 * fem),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        // bolddocumentRNd (120:176)
-                                        margin: EdgeInsets.fromLTRB(
-                                            0 * fem, 0 * fem, 0 * fem, 6 * fem),
-                                        width: 18 * fem,
-                                        height: 20 * fem,
-                                        child: Image.asset(
-                                          'assets/screen/images/bold-document.png',
-                                          width: 18 * fem,
-                                          height: 20 * fem,
-                                        ),
-                                      ),
-                                      Text(
-                                        // ordersjeD (120:177)
-                                        'Orders',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontSize: 12 * ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.2125 * ffem / fem,
-                                          letterSpacing: 0.12 * fem,
-                                          color: Color(0xff464948),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  // chatH9w (120:178)
-                                  margin: EdgeInsets.fromLTRB(
-                                      0 * fem, 3 * fem, 0 * fem, 0 * fem),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        // autogroupqvmfRmw (5yHFP1LUDhUkhGF24DQVMF)
-                                        margin: EdgeInsets.fromLTRB(0.18 * fem,
-                                            0 * fem, 0 * fem, 7.32 * fem),
-                                        width: 19.42 * fem,
-                                        height: 17.68 * fem,
-                                        child: Image.asset(
-                                          'assets/screen/images/auto-group-qvmf.png',
-                                          width: 19.42 * fem,
-                                          height: 17.68 * fem,
-                                        ),
-                                      ),
-                                      Text(
-                                        // akunaYM (120:180)
-                                        'Akun',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontSize: 12 * ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.2125 * ffem / fem,
-                                          letterSpacing: 0.12 * fem,
-                                          color: Color(0xff464948),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                            Text(
+                              // orders1aV (416:1189)
+                              'Order',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 12 * ffem,
+                                fontWeight: FontWeight.w400,
+                                height: 1.2125 * ffem / fem,
+                                letterSpacing: 0.12 * fem,
+                                color: const Color(0xff464948),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
+                    GestureDetector(
+                      onTap: () {
+                        
+                      },
+                      child: Container(
+                        // chatYqK (416:1190)
+//                         margin: EdgeInsets.fromLTRB(0 * fem, 3 * fem, 0 * fem, 0 * fem),
+                        margin: EdgeInsets.fromLTRB(0 * fem, 15 * fem, 0 * fem, 15 * fem),
+                        width: screenWidth * 0.235,
+                        child: Column(
+                          crossAxisAlignment:
+                              CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              // autogroupaa8mHY1 (5yHZQa8dS4JyhmM5fUaa8m)
+                              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0.62 * fem, 7 * fem),
+                              width: 18.62 * fem,
+                              height: 17.68 * fem,
+                              child: Image.asset(
+                                'assets/screen/images/auto-group-aa8m.png',
+                                width: 18.62 * fem,
+                                height: 17.68 * fem,
+                              ),
+                            ),
+                            Text('Account',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 12 * ffem,
+                                fontWeight: FontWeight.w400,
+                                height: 1.2125 * ffem / fem,
+                                letterSpacing: 0.12 * fem,
+                                color: const Color(0xff464948),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),  
             ),
           ],
         ),
+//       ),
+      
       ),
-      ),
+            
+        ),
     );
   }
 }
