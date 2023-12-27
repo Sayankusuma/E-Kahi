@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
+import 'package:myapp/screen/keranjang.dart';
+import 'package:myapp/screen/daftar-menu-pertoko.dart';
+// import 'package:flutter/gestures.dart';
+// import 'dart:ui';
 // import 'package:google_fonts/google_fonts.dart';
 // import 'package:myapp/utils.dart';
 
-class Scene extends StatelessWidget {
+class TotalPesananPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -28,10 +30,21 @@ class Scene extends StatelessWidget {
                   EdgeInsets.fromLTRB(0 * fem, 0 * fem, 341 * fem, 12 * fem),
               width: 18 * fem,
               height: 15 * fem,
-              child: Image.asset(
-                'assets/screen/images/vector-fPj.png',
-                width: 18 * fem,
-                height: 15 * fem,
+              child:TextButton(
+              onPressed:  () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => KeranjangPage()),
+                );
+              },
+              style:  TextButton.styleFrom (
+                padding:  EdgeInsets.zero,
+              ),
+                child: Image.asset(
+                  'assets/screen/images/vector-fPj.png',
+                  width: 18 * fem,
+                  height: 15 * fem,
+                ),
               ),
             ),
             Container(
@@ -360,16 +373,24 @@ class Scene extends StatelessWidget {
                 color: Color(0xffffffff),
                 borderRadius: BorderRadius.circular(10 * fem),
               ),
-              child: Center(
-                child: Text(
-                  '+ Tambah Pesanan',
-                  style: TextStyle(
-                    fontFamily: 'Inter',
-                    fontSize: 11 * ffem,
-                    fontWeight: FontWeight.w700,
-                    height: 1.2125 * ffem / fem,
-                    letterSpacing: 0.11 * fem,
-                    color: Color(0xff000000),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MenuTokoPage()),
+                  ); // Kembali ke halaman sebelumnya
+                },
+                child: Center(
+                  child: Text(
+                    '+ Tambah Pesanan',
+                    style: TextStyle(
+                      fontFamily: 'Inter',
+                      fontSize: 11 * ffem,
+                      fontWeight: FontWeight.w700,
+                      height: 1.2125 * ffem / fem,
+                      letterSpacing: 0.11 * fem,
+                      color: Color(0xff000000),
+                    ),
                   ),
                 ),
               ),

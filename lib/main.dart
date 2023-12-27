@@ -14,7 +14,7 @@ import 'package:myapp/screen/onboarding.dart';
 // import 'package:myapp/screen/color.dart';
 // import 'package:myapp/screen/line-2.dart';
 // import 'package:myapp/screen/input-password.dart';
-// import 'package:myapp/screen/daftar-menu-pertoko.dart';
+import 'package:myapp/screen/daftar-menu-pertoko.dart';
 // import 'package:myapp/screen/daftar-promo-pertoko.dart';
 import 'package:myapp/screen/menu-promo.dart';
 // import 'package:myapp/screen/metode-e-money.dart';
@@ -22,7 +22,7 @@ import 'package:myapp/screen/menu-promo.dart';
 // import 'package:myapp/screen/tampilan-isi-chat.dart';
 // import 'package:myapp/screen/chat.dart';
 // import 'package:myapp/screen/edit-chat.dart';
-// import 'package:myapp/screen/total-pesanan.dart';
+import 'package:myapp/screen/total-pesanan.dart';
 // import 'package:myapp/screen/byr-emoney.dart';
 // import 'package:myapp/screen/byr-tunai.dart';
 // import 'package:myapp/screen/keranjang.dart';
@@ -46,16 +46,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/home',
+      initialRoute: '/totalPesanan',
       routes: {
         '/onboarding': (context) => OnboardingPage(),
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignUpPage(),
-        '/home': (context) => MyHome(),
+        '/home': (context) => HomePage(),
         '/metodeTopup': (context) => MetodeTopupPage(),
+        '/menuToko': (context) => MenuTokoPage(),
         '/menuPromo': (context) => MenuPromoPage(),
         '/keranjang': (context) => KeranjangPage(),
-        '/menuProfil': (context) => MenuProfilPage()
+        '/menuProfil': (context) => MenuProfilPage(),
+        '/totalPesanan': (context) => TotalPesananPage(),
       },
       // home: Scaffold(
       //   body: SingleChildScrollView(
