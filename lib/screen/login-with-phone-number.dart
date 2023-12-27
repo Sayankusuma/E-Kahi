@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/gestures.dart';
 import 'dart:ui';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:myapp/utils.dart';
 import 'home-screen.dart';
 
 class LoginPage extends StatelessWidget {
@@ -14,14 +11,12 @@ class LoginPage extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: Container(
-        // loginwithphonenumberyxq (1:273)
         width: double.infinity,
         height: 843 * fem,
         decoration: BoxDecoration(
           color: Color(0xffffffff),
         ),
         child: Container(
-          // autogroupgi4u7p9 (5yHHcrmmd6bzgtwAHVGi4u)
           padding: EdgeInsets.fromLTRB(16 * fem, 70 * fem, 15 * fem, 27 * fem),
           width: double.infinity,
           height: 809 * fem,
@@ -29,7 +24,6 @@ class LoginPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                // autogroupdeqddXb (5yHHRHGjBK67DWYJxrdEQd)
                 margin:
                     EdgeInsets.fromLTRB(3 * fem, 0 * fem, 1 * fem, 32 * fem),
                 width: double.infinity,
@@ -319,165 +313,11 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
-              // Row(
-              //   children: [
-              //     SizedBox(
-              //       child: Row(
-              //         crossAxisAlignment: CrossAxisAlignment.center,
-              //         children: [
-              //           Container(
-              //         // flagsi93 (1:347)
-              //             margin: EdgeInsets.fromLTRB(
-              //                 0 * fem, 0.79 * fem, 4 * fem, 0.79 * fem),
-              //             width: 16 * fem,
-              //             height: double.infinity,
-              //             decoration: BoxDecoration(
-              //               color: Color(0xffffffff),
-              //               borderRadius: BorderRadius.circular(
-              //                   2.2857143879 * fem),
-              //             ),
-              //             child: Align(
-              //               // vectorSaq (1:348)
-              //               alignment: Alignment.topCenter,
-              //               child: SizedBox(
-              //                 width: double.infinity,
-              //                 height: 6.1 * fem,
-              //                 child: Container(
-              //                   decoration: BoxDecoration(
-              //                     color: Color(0xfff83939),
-              //                   ),
-              //                 ),
-              //               ),
-              //             ),
-              //           ),
-              //           TextFormField(
-              //             obscureText: true,
-              //             decoration: InputDecoration(
-              //               labelText: 'Phone Number',
-              //               hintText: '81234567890',
-              //             ),
-              //           ),
-              //           Container(
-              //             // buttonclosejbs (1:355)
-              //             width: 14 * fem,
-              //             height: 14 * fem,
-              //             child: Image.asset(
-              //               'assets/screen/images/button-close.png',
-              //               width: 14 * fem,
-              //               height: 14 * fem,
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ],
-              // ),
-
-
-
-              // Container(
-              //   // group604u3 (291:137)
-              //   margin:
-              //       EdgeInsets.fromLTRB(3 * fem, 0 * fem, 0 * fem, 400 * fem),
-              //   width: 356 * fem,
-              //   child: Column(
-              //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     children: [
-              //       Container(
-              //         // passwordbty (291:138)
-              //         margin: EdgeInsets.fromLTRB(
-              //             0 * fem, 0 * fem, 0 * fem, 16 * fem),
-              //         child: Text(
-              //           'Password',
-              //           style: TextStyle(
-              //             fontFamily: 'Inter',
-              //             fontSize: 12 * ffem,
-              //             fontWeight: FontWeight.w100,
-              //             height: 1 * ffem / fem,
-              //             letterSpacing: 0.12 * fem,
-              //             color: Color(0xff484848),
-              //           ),
-              //         ),
-              //       ),
-              //       Container(
-              //         // autogroup3a5kJoP (5yHJBvf1HGr1EoDBnW3A5K)
-              //         margin: EdgeInsets.fromLTRB(
-              //             2 * fem, 0 * fem, 1 * fem, 8 * fem),
-              //         width: double.infinity,
-              //         height: 22 * fem,
-              //         child: Row(
-              //           crossAxisAlignment: CrossAxisAlignment.center,
-              //           children: [
-              //             Container(
-              //               // passwordQbX (291:139)
-              //               margin: EdgeInsets.fromLTRB(
-              //                   0 * fem, 3 * fem, 10 * fem, 0 * fem),
-              //               child: Text(
-              //                 'Password :',
-              //                 style: TextStyle(
-              //                   fontFamily: 'Lato',
-              //                   fontSize: 12 * ffem,
-              //                   fontWeight: FontWeight.w700,
-              //                   height: 1.0833333333 * ffem / fem,
-              //                   letterSpacing: 0.12 * fem,
-              //                   color: Color(0xff1d1d1d),
-              //                 ),
-              //               ),
-              //             ),
-              //             Container(
-              //               // number7Vw (291:140)
-              //               margin: EdgeInsets.fromLTRB(
-              //                   0 * fem, 0 * fem, 114 * fem, 0 * fem),
-              //               height: double.infinity,
-              //               child: Row(
-              //                 crossAxisAlignment: CrossAxisAlignment.center,
-              //                 children: [
-              //                   Container(
-              //                     // typeyourpassword4AH (291:141)
-              //                     margin: EdgeInsets.fromLTRB(
-              //                         0 * fem, 0 * fem, 1 * fem, 0 * fem),
-              //                     child: Text(
-              //                       'Type your password',
-              //                       style: TextStyle(
-              //                         fontFamily: 'Inter',
-              //                         fontSize: 16 * ffem,
-              //                         fontWeight: FontWeight.w100,
-              //                         height: 1 * ffem / fem,
-              //                         letterSpacing: 0.16 * fem,
-              //                         color: Color(0xff1d1d1d),
-              //                       ),
-              //                     ),
-              //                   ),
-              //                 ],
-              //               ),
-              //             ),
-              //             Container(
-              //               // vectorAj7 (291:144)
-              //               margin: EdgeInsets.fromLTRB(
-              //                   0 * fem, 0.25 * fem, 0 * fem, 0 * fem),
-              //               width: 19 * fem,
-              //               height: 16.98 * fem,
-              //               child: Image.asset(
-              //                 'assets/screen/images/vector-pb7.png',
-              //                 width: 19 * fem,
-              //                 height: 16.98 * fem,
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
               Container(
                 // buttoncontinue5LH (1:375)
                 margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 1 * fem, 0 * fem),
                 width: 358 * fem,
                 height: 40 * fem,
-                // decoration: BoxDecoration(
-                //   color: Color(0xff1b4965),
-                //   borderRadius: BorderRadius.circular(20 * fem),
-                // ),
                 child: Center(
                   child: 
                   ElevatedButton(
@@ -486,12 +326,10 @@ class LoginPage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.fromLTRB(153 * fem, 15 * fem, 153 * fem, 15 * fem),
-                        // backgroundColor: Color.fromARGB(255, 25, 0, 95),
                         backgroundColor: Color(0xff1b4965),                      
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20 * fem),
                         ),
-                        // side: BorderSide(color: Color(0xff1B4965)),
                       ),
                       child: Text(
                         'Continue',
@@ -505,28 +343,6 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                   ),
-                  // ElevatedButton(
-                  //   onPressed: () {
-                  //     Navigator.pushNamed(context, '/home');
-                  //   },
-                  //   style: ElevatedButton.styleFrom(
-                  //       // backgroundColor: const Color(0xff44576D),
-                  //       // shape: RoundedRectangleBorder(
-                  //       //   borderRadius: BorderRadius.circular(20 * fem),
-                  //       // ),
-                  //       ),
-                  //   child: Text(
-                  //     'Continue',
-                  //     style: TextStyle(
-                  //       fontFamily: 'Inter',
-                  //       fontSize: 16 * ffem,
-                  //       fontWeight: FontWeight.w700,
-                  //       height: 1 * ffem / fem,
-                  //       letterSpacing: 0.16 * fem,
-                  //       color: Color(0xffffffff),
-                  //     ),
-                  //   ),
-                  // ),
                 ),
               ),
             ],
