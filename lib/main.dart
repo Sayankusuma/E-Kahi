@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/screen/keranjang.dart';
 import 'package:myapp/screen/menu-profil-.dart';
-// import 'package:flutter/gestures.dart';
-// import 'dart:ui';
-// import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 import 'package:myapp/screen/home-screen.dart';
 // import 'package:myapp/screen/menu-akun.dart';
@@ -25,8 +22,8 @@ import 'package:myapp/screen/menu-promo.dart';
 import 'package:myapp/screen/total-pesanan.dart';
 // import 'package:myapp/screen/byr-emoney.dart';
 // import 'package:myapp/screen/byr-tunai.dart';
-// import 'package:myapp/screen/keranjang.dart';
-// import 'package:myapp/screen/menu-profil-.dart';`
+import 'package:myapp/screen/keranjang.dart';
+import 'package:myapp/screen/menu-profil-.dart';`
 import 'package:myapp/screen/metode-top-up.dart';
 import 'package:myapp/screen/edit-chat-qmF.dart';
 // import 'package:myapp/screen/bukti-pembayaran.dart';
@@ -60,11 +57,7 @@ class MyApp extends StatelessWidget {
         '/totalPesanan': (context) => TotalPesananPage(),
         '/menuOrders': (context) => MenuOrdersPage(), // menuOrders = edit-chat-qmF
       },
-      // home: Scaffold(
-      //   body: SingleChildScrollView(
-      //     child: Scene(),
-      //   ),
-      // ),
+
     );
   }
 }
