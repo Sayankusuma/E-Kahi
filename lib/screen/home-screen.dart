@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/screen/menu-promo.dart';
+import 'package:myapp/screen/edit-chat-qmF.dart';
+import 'package:myapp/screen/menu-profil-.dart';
 // import 'package:flutter/gestures.dart';
 // import 'dart:ui';
 // import 'package:google_fonts/google_fonts.dart';
@@ -450,7 +453,10 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
                       },
                       child: Container(
                         // homePn5 (416:1180)
@@ -491,7 +497,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        
+                        Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuPromoPage()),
+                );
                       },
                       child: Container(
                         // promosaLm (416:1184)
@@ -532,7 +541,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        
+                        Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuOrdersPage()),
+                );
                       },
                       child: Container(
                         // ordersZTb (416:1187)
@@ -573,7 +585,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        
+                        Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuProfilPage()),
+                );
                       },
                       child: Container(
                         // chatYqK (416:1190)

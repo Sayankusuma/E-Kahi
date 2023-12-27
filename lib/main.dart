@@ -28,7 +28,7 @@ import 'package:myapp/screen/total-pesanan.dart';
 // import 'package:myapp/screen/keranjang.dart';
 // import 'package:myapp/screen/menu-profil-.dart';`
 import 'package:myapp/screen/metode-top-up.dart';
-// import 'package:myapp/screen/edit-chat-qmF.dart';
+import 'package:myapp/screen/edit-chat-qmF.dart';
 // import 'package:myapp/screen/bukti-pembayaran.dart';
 // import 'package:myapp/screen/bukti-pembayaran-Mid.dart';
 // import 'package:myapp/screen/bukti-pembayaran-nkd.dart';
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/totalPesanan',
+      initialRoute: '/home',
       routes: {
         '/onboarding': (context) => OnboardingPage(),
         '/login': (context) => LoginPage(),
@@ -58,6 +58,7 @@ class MyApp extends StatelessWidget {
         '/keranjang': (context) => KeranjangPage(),
         '/menuProfil': (context) => MenuProfilPage(),
         '/totalPesanan': (context) => TotalPesananPage(),
+        '/menuOrders': (context) => MenuOrdersPage(),
       },
       // home: Scaffold(
       //   body: SingleChildScrollView(
