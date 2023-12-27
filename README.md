@@ -1,2 +1,4 @@
 # E-Kahi
-Project uas mobile dan web 
+Aplikasi mobile untuk memesan makanan/minuman di kantin teknik untirta.
+
+Framework yang digunakan: Flutter
