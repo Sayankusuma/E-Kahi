@@ -133,10 +133,11 @@ class MenuProfilPage extends StatelessWidget {
                               children: [
                                 GestureDetector(
                                   onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => MyHome()));
+                                    Navigator.pushNamed(context, '/home');
+                                    // Navigator.push(
+                                    //     context,
+                                    //     MaterialPageRoute(
+                                    //         builder: (context) => '/home'()));
                                   },
                                   child: Container(
                                     // homePn5 (416:1180)
