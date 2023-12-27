@@ -37,14 +37,15 @@ class MenuPromoPage extends StatelessWidget {
                         Container(
                           // autogroupaordHt1 (5yHgA8PCTGT5va7LWMaord)
                           padding: EdgeInsets.fromLTRB(
-                              19 * fem, 23.5 * fem, 19.75 * fem, 63 * fem),
+                              19 * fem, 23.5 * fem, 19.75 * fem, 46.5 * fem),
                           width: double.infinity,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  // Aksi yang akan dilakukan saat gambar ditekan
+                                  Navigator.pushNamed(context,
+                                      '/home'); // Aksi yang akan dilakukan saat gambar ditekan
                                 },
                                 child: Container(
                                   margin:
@@ -121,21 +122,39 @@ class MenuPromoPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    Container(
-                                      // vectorJq3 (236:184)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 0 * fem, 4.85 * fem),
-                                      width: 26.25 * fem,
-                                      height: 28.15 * fem,
-                                      child: Image.asset(
-                                        'assets/screen/images/vector-xmK.png',
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.pushNamed(context,
+                                            '/keranjang'); // Aksi yang akan dijalankan ketika tombol ditekan
+                                      },
+                                      child: Container(
+                                        margin: EdgeInsets.fromLTRB(0 * fem,
+                                            0 * fem, 0 * fem, 4.85 * fem),
                                         width: 26.25 * fem,
                                         height: 28.15 * fem,
+                                        child: Image.asset(
+                                          'assets/screen/images/vector-xmK.png',
+                                          width: 26.25 * fem,
+                                          height: 28.15 * fem,
+                                        ),
                                       ),
                                     ),
+                                    // Container(
+                                    //   // vectorJq3 (236:184)
+                                    //   margin: EdgeInsets.fromLTRB(0 * fem,
+                                    //       0 * fem, 0 * fem, 4.85 * fem),
+                                    //   width: 26.25 * fem,
+                                    //   height: 28.15 * fem,
+                                    //   child: Image.asset(
+                                    //     'assets/screen/images/vector-xmK.png',
+                                    //     width: 26.25 * fem,
+                                    //     height: 28.15 * fem,
+                                    //   ),
+                                    // ),
                                   ],
                                 ),
                               ),
+                              // tutup kurung
                               Container(
                                 // group65RPs (236:161)
                                 margin: EdgeInsets.fromLTRB(
@@ -647,7 +666,9 @@ class MenuPromoPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.pushNamed(context, '/home');
+                                  },
                                   child: Container(
                                     // homePn5 (416:1180)
                                     margin: EdgeInsets.fromLTRB(
@@ -730,7 +751,9 @@ class MenuPromoPage extends StatelessWidget {
                                   ),
                                 ),
                                 GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.pushNamed(context, '/keranjang');
+                                  },
                                   child: Container(
                                     // ordersZTb (416:1187)
 //                         margin: EdgeInsets.fromLTRB(0 * fem, 2 * fem, 60.5 * fem, 0 * fem),
@@ -771,7 +794,9 @@ class MenuPromoPage extends StatelessWidget {
                                   ),
                                 ),
                                 GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.pushNamed(context, '/menuProfil');
+                                  },
                                   child: Container(
                                     // chatYqK (416:1190)
 //                         margin: EdgeInsets.fromLTRB(0 * fem, 3 * fem, 0 * fem, 0 * fem),
