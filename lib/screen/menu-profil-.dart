@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/screen/home-screen.dart';
-// import 'package:flutter/gestures.dart';
-// import 'dart:ui';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:myapp/utils.dart';
+import 'dart:ui';
+import 'package:myapp/utils.dart';
 
 class MenuProfilPage extends StatelessWidget {
   @override
@@ -23,13 +21,10 @@ class MenuProfilPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-//       width: double.infinity,\
                   height: screenHeight,
                   width: screenWidth,
 
                   child: Container(
-                    // menuprofilgBP (227:158)
-                    // width: double.infinity,
                     width: screenWidth,
                     decoration: BoxDecoration(
                       color: Color(0xffffffff),
@@ -134,10 +129,6 @@ class MenuProfilPage extends StatelessWidget {
                                 GestureDetector(
                                   onTap: () {
                                     Navigator.pushNamed(context, '/home');
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) => '/home'()));
                                   },
                                   child: Container(
                                     // homePn5 (416:1180)
@@ -185,7 +176,6 @@ class MenuProfilPage extends StatelessWidget {
                                   },
                                   child: Container(
                                     // promosaLm (416:1184)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 2.46 * fem, 52 * fem, 0 * fem),
                                     margin: EdgeInsets.fromLTRB(
                                         0 * fem, 15 * fem, 0 * fem, 15 * fem),
                                     width: screenWidth * 0.125,
@@ -228,7 +218,6 @@ class MenuProfilPage extends StatelessWidget {
                                   },
                                   child: Container(
                                     // ordersZTb (416:1187)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 2 * fem, 60.5 * fem, 0 * fem),
                                     margin: EdgeInsets.fromLTRB(
                                         0 * fem, 15 * fem, 0 * fem, 15 * fem),
                                     width: screenWidth * 0.125,
@@ -269,7 +258,6 @@ class MenuProfilPage extends StatelessWidget {
                                   onTap: () {},
                                   child: Container(
                                     // chatYqK (416:1190)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 3 * fem, 0 * fem, 0 * fem),
                                     margin: EdgeInsets.fromLTRB(
                                         0 * fem, 15 * fem, 0 * fem, 15 * fem),
                                     width: screenWidth * 0.125,
