@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/gestures.dart';
-// import 'dart:ui';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:myapp/utils.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -20,7 +16,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final GlobalKey<ScaffoldState> _menuDrawer = GlobalKey<ScaffoldState>();
-//   final ScrollController _scrollController = ScrollController();
 
   void _openDrawer() {
     _menuDrawer.currentState!.openDrawer();
@@ -39,9 +34,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         key: _menuDrawer,
         drawer: Drawer(
-//         height: screenHeight,
           width: screenWidth * 0.65,
-//         shape: null,
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -52,13 +45,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             child: ListView(
-//           height: screenHeight,
-//         width: screenWidth * 0.5,
               padding: EdgeInsets.zero,
               children: [
                 SizedBox(
                   height: screenHeight * 0.1,
-//               width: screenWidth * 0.5,
                   child: DrawerHeader(
                     decoration: BoxDecoration(
                       color: Color(0xff1b4965),
@@ -94,13 +84,6 @@ class _HomePageState extends State<HomePage> {
         body: Container(
           height: screenHeight,
           width: screenWidth,
-//       width: double.infinity,
-//       child: Container(
-//         // homescreenKxh (1:16)
-//         width: double.infinity,
-//         decoration: BoxDecoration(
-//           color: Color(0xffffffff),
-//         ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -118,32 +101,19 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Center(
                       // autogroupjfthyfs (5yHCpFH1Q8hZ1uyKGRjfth)
-//                     width: screenWidth * 0.5,
-//                     height: screenHeight * 0.25,
-//                     padding: EdgeInsets.fromLTRB(10*fem, 0*fem, 10*fem, 0*fem),
-//                     width: screenWidth,
-//                     height: screenHeight * 0.125,
                       child: Stack(
                         children: [
                           Container(
                             width: screenWidth * 0.25,
-//                           height: screenHeight * 0.25,
-//                           margin: EdgeInsets.fromLTRB(screenWidth * 0.125, 0 * fem, 0, 0 * fem),
                             margin: EdgeInsets.fromLTRB(0, 0 * fem, 0, 0 * fem),
                             child: ElevatedButton(
                               //                     icon: const Icon(Icons.menu),
                               // profileriy (1:56)
                               onPressed: _openDrawer,
                               style: ElevatedButton.styleFrom(
-//                             padding: EdgeInsets.fromLTRB(5 * fem, 2.5 * fem, 5 * fem, 2.5 * fem),
-                                //                       shape: RoundedRectangleBorder(
-                                //                         borderRadius: BorderRadius.circular(15),
-                                //                       ),
-                                //                       elevation: 0,
                                 backgroundColor: const Color(0xff1b4965),
                                 fixedSize: Size(38 * fem, 37 * fem),
                               ),
-                              //                     child: Align(
                               child: SizedBox(
                                 width: 38 * fem,
                                 height: 37 * fem,
@@ -153,7 +123,6 @@ class _HomePageState extends State<HomePage> {
                                   height: 37 * fem,
                                 ),
                               ),
-                              //                     ),
                             ),
                           ),
                         ],
@@ -164,21 +133,10 @@ class _HomePageState extends State<HomePage> {
                       margin: EdgeInsets.fromLTRB(
                           0 * fem, 0 * fem, 0 * fem, 0 * fem),
                       width: screenWidth * 0.5,
-//                     height: screenHeight * 0.0125,
                       child:
-//                         Positioned(
-//                           // frame54MSV (120:200)
-//                           left: 55*fem,
-//                           top: 0*fem,
-//                           child: Container(
-//                             width: 100*fem,
-//                             height: 100*fem,
-//                           ),
-//                         ),
                           Positioned(
                         // ekahi69B (594:138)
                         left: 0 * fem,
-//                           top: 35.5*fem,
                         child: Center(
                           child: Align(
                             child: SizedBox(
@@ -191,7 +149,6 @@ class _HomePageState extends State<HomePage> {
                                   fontFamily: 'Inter',
                                   fontSize: 24 * ffem,
                                   fontWeight: FontWeight.w700,
-//                                     height: screenHeight * 0.05,
                                   letterSpacing: 2 * fem,
                                   color: Color(0xffffffff),
                                 ),
@@ -203,7 +160,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Container(
                       // autogroup7k1pML1 (TExsnY2fdPYXo4y7pA7K1P)
-//                     margin: EdgeInsets.fromLTRB(0, 0 * fem, screenWidth * 0.1, 0 * fem),
                       margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0, 0 * fem),
                       width: screenWidth * 0.25,
                       child: ElevatedButton(
@@ -211,15 +167,9 @@ class _HomePageState extends State<HomePage> {
                         // profileriy (1:56)
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-//                       padding: EdgeInsets.fromLTRB(5 * fem, 2.5 * fem, 5 * fem, 2.5 * fem),
-//                       shape: RoundedRectangleBorder(
-//                         borderRadius: BorderRadius.circular(15),
-//                       ),
-//                       elevation: 0,
                           backgroundColor: const Color(0xff1b4965),
                           fixedSize: Size(28 * fem, 49 * fem),
                         ),
-//                     child: Align(
                         child: SizedBox(
                           width: 28 * fem,
                           height: 49 * fem,
@@ -229,7 +179,6 @@ class _HomePageState extends State<HomePage> {
                             height: 49 * fem,
                           ),
                         ),
-//                     ),
                       ),
                     ),
                   ],
@@ -249,24 +198,15 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Container(
                         // sectionrestosnearmepDs (120:329)
-//                     height BENERIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNNNNNNNNNNNNN
                         height: 0.09 * screenHeight,
                         width: screenWidth * 0.5,
                         margin: EdgeInsets.fromLTRB(
                             64 * fem, 10 * fem, 64 * fem, 15 * fem),
                         padding: EdgeInsets.fromLTRB(
                             16 * fem, 23 * fem, 16 * fem, 23 * fem),
-//                     width: double.infinity,
                         decoration: BoxDecoration(
                           color: Color(0xffffffff),
                           borderRadius: BorderRadius.circular(16 * fem),
-//                       boxShadow: [
-//                         BoxShadow(
-//                           color: Color(0x26000000),
-//                           offset: Offset(0 * fem, 1 * fem),
-//                           blurRadius: 2 * fem,
-//                         ),
-//                       ],
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -314,18 +254,6 @@ class _HomePageState extends State<HomePage> {
                                   if (index >= 3) return null;
                                   return Center(
                                     // group64GEH (120:970)
-//                                     margin: EdgeInsets.fromLTRB(5 * fem, 1 * fem, 0 * fem, 5 * fem),
-//                                 decoration: BoxDecoration(
-//                                   borderRadius: BorderRadius.circular(16 * fem),
-//                                   color: const Color(0xffffffff),
-//                                   boxShadow: [
-//                                     BoxShadow(
-//                                       color: const Color(0x26000000),
-//                                       offset: Offset(0 * fem, 1 * fem),
-//                                       blurRadius: 2 * fem,
-//                                     ),
-//                                   ],
-//                                 ),
                                     child: ListTile(
                                       subtitle: ElevatedButton(
                                         // group61nyK (120:954)
@@ -334,52 +262,16 @@ class _HomePageState extends State<HomePage> {
                                               context, '/menutoko');
                                         },
                                         style: ElevatedButton.styleFrom(
-                                          // width: double.infinity,
-                                          // height: double.infinity,
                                           primary: Colors.white,
-//                                         color: const Color(0xffffffff),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(16 * fem),
-//                                           boxShadow: [
-//                                             BoxShadow(
-//                                               color: const Color(0x26000000),
-//                                               offset: Offset(0 * fem, 1 * fem),
-//                                               blurRadius: 2 * fem,
-//                                             ),
-//                                           ],
                                           ),
                                           elevation: 4 * fem,
                                           fixedSize: Size(screenWidth * 0.8,
                                               screenHeight * 0.225),
                                         ),
                                         child: Container(
-                                          // sectionbestsellerYxV (1:185)
-//                                         padding: EdgeInsets.fromLTRB(9 * fem, 7 * fem, 56 * fem, 7 * fem),
-//                                         decoration: BoxDecoration(
-//                                           borderRadius: BorderRadius.circular(16 * fem),
-//                                           color: const Color(0xffffffff),
-//                                           boxShadow: [
-//                                             BoxShadow(
-//                                               color: const Color(0x26000000),
-//                                               offset: Offset(0 * fem, 1 * fem),
-//                                               blurRadius: 2 * fem,
-//                                             ),
-//                                           ],
-//                                         ),
-                                          // width: double.infinity,
-                                          // height: double.infinity,
-                                          // decoration: BoxDecoration(
-                                          //   color: Color(0xffffffff),
-                                          //   borderRadius: BorderRadius.circular(16 * fem),
-                                          //   boxShadow: [
-                                          //     BoxShadow(
-                                          //       color: Color(0x26000000),
-                                          //       offset: Offset(0 * fem, 1 * fem),
-                                          //       blurRadius: 2 * fem,
-                                          //     ),
-                                          //   ],
-                                          // ),
                                           child: Row(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.center,
@@ -396,9 +288,6 @@ class _HomePageState extends State<HomePage> {
                                                           16 * fem),
                                                   child: Image.asset(
                                                     'assets/screen/images/rectangle-33.png',
-//                                                   width: screenWidth * 0.4,
-//                                                   height: screenHeight * 0.15,
-//                                                   fit: BoxFit.cover,
                                                   ),
                                                 ),
                                               ),
@@ -444,7 +333,6 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.fromLTRB(0, 0 * fem, 0, 0),
                 child: Container(
                   height: screenHeight * 0.1,
-//                 width: 90,
                   width: screenWidth,
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -509,7 +397,6 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Container(
                           // promosaLm (416:1184)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 2.46 * fem, 52 * fem, 0 * fem),
                           margin: EdgeInsets.fromLTRB(
                               0 * fem, 15 * fem, 0 * fem, 15 * fem),
                           width: screenWidth * 0.235,
@@ -551,7 +438,6 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Container(
                           // ordersZTb (416:1187)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 2 * fem, 60.5 * fem, 0 * fem),
                           margin: EdgeInsets.fromLTRB(
                               0 * fem, 15 * fem, 0 * fem, 15 * fem),
                           width: screenWidth * 0.235,
@@ -593,7 +479,6 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Container(
                           // chatYqK (416:1190)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 3 * fem, 0 * fem, 0 * fem),
                           margin: EdgeInsets.fromLTRB(
                               0 * fem, 15 * fem, 0 * fem, 15 * fem),
                           width: screenWidth * 0.235,
