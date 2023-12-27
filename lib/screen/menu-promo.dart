@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:myapp/utils.dart';
 
 class MenuPromoPage extends StatelessWidget {
   @override
@@ -74,7 +72,6 @@ class MenuPromoPage extends StatelessWidget {
                                           0 * fem, 0 * fem, 28 * fem, 0 * fem),
                                       padding: EdgeInsets.fromLTRB(14 * fem,
                                           13 * fem, 14 * fem, 8 * fem),
-//                           height: double.infinity,
                                       decoration: BoxDecoration(
                                         color: Color(0xffffffff),
                                         borderRadius:
@@ -139,22 +136,9 @@ class MenuPromoPage extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    // Container(
-                                    //   // vectorJq3 (236:184)
-                                    //   margin: EdgeInsets.fromLTRB(0 * fem,
-                                    //       0 * fem, 0 * fem, 4.85 * fem),
-                                    //   width: 26.25 * fem,
-                                    //   height: 28.15 * fem,
-                                    //   child: Image.asset(
-                                    //     'assets/screen/images/vector-xmK.png',
-                                    //     width: 26.25 * fem,
-                                    //     height: 28.15 * fem,
-                                    //   ),
-                                    // ),
                                   ],
                                 ),
                               ),
-                              // tutup kurung
                               Container(
                                 // group65RPs (236:161)
                                 margin: EdgeInsets.fromLTRB(
@@ -167,7 +151,6 @@ class MenuPromoPage extends StatelessWidget {
                                 child: Container(
                                   // group61kS9 (236:162)
                                   width: double.infinity,
-//                       height: double.infinity,
                                   decoration: BoxDecoration(
                                     borderRadius:
                                         BorderRadius.circular(16 * fem),
@@ -177,7 +160,6 @@ class MenuPromoPage extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(
                                         25 * fem, 4 * fem, 25 * fem, 7 * fem),
                                     width: double.infinity,
-//                         height: double.infinity,
                                     decoration: BoxDecoration(
                                       color: Color(0xffffffff),
                                       borderRadius:
@@ -216,7 +198,6 @@ class MenuPromoPage extends StatelessWidget {
                                 child: Container(
                                   // group61tgm (237:278)
                                   width: double.infinity,
-//                       height: double.infinity,
                                   decoration: BoxDecoration(
                                     borderRadius:
                                         BorderRadius.circular(16 * fem),
@@ -226,7 +207,6 @@ class MenuPromoPage extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(
                                         0 * fem, 0 * fem, 56 * fem, 0 * fem),
                                     width: double.infinity,
-//                         height: double.infinity,
                                     decoration: BoxDecoration(
                                       color: Color(0xffffffff),
                                       borderRadius:
@@ -252,7 +232,6 @@ class MenuPromoPage extends StatelessWidget {
                                           child: Stack(
                                             children: [
                                               Positioned(
-                                                // rectangle33Sbo (237:280)
                                                 left: 9 * fem,
                                                 top: 7 * fem,
                                                 child: Align(
@@ -362,7 +341,6 @@ class MenuPromoPage extends StatelessWidget {
                                 child: Container(
                                   // group61ytZ (238:322)
                                   width: double.infinity,
-//                       height: double.infinity,
                                   decoration: BoxDecoration(
                                     borderRadius:
                                         BorderRadius.circular(16 * fem),
@@ -372,7 +350,6 @@ class MenuPromoPage extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(
                                         0 * fem, 0 * fem, 63 * fem, 0 * fem),
                                     width: double.infinity,
-//                         height: double.infinity,
                                     decoration: BoxDecoration(
                                       color: Color(0xffffffff),
                                       borderRadius:
@@ -508,7 +485,6 @@ class MenuPromoPage extends StatelessWidget {
                                 child: Container(
                                   // group611Vo (238:330)
                                   width: double.infinity,
-//                       height: double.infinity,
                                   decoration: BoxDecoration(
                                     borderRadius:
                                         BorderRadius.circular(16 * fem),
@@ -518,7 +494,6 @@ class MenuPromoPage extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(
                                         0 * fem, 0 * fem, 47 * fem, 0 * fem),
                                     width: double.infinity,
-//                         height: double.infinity,
                                     decoration: BoxDecoration(
                                       color: Color(0xffffffff),
                                       borderRadius:
@@ -536,7 +511,6 @@ class MenuPromoPage extends StatelessWidget {
                                           CrossAxisAlignment.center,
                                       children: [
                                         Container(
-                                          // autogroupmgnq4U5 (5yHgiMxVGrYGYLw6mvmGNq)
                                           margin: EdgeInsets.fromLTRB(0 * fem,
                                               0 * fem, 55 * fem, 7 * fem),
                                           width: 154 * fem,
@@ -649,7 +623,6 @@ class MenuPromoPage extends StatelessWidget {
                           padding: EdgeInsets.fromLTRB(0, 5 * fem, 0, 0),
                           child: Container(
                             height: screenHeight * 0.1,
-//                 width: 90,
                             width: screenWidth,
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -673,7 +646,6 @@ class MenuPromoPage extends StatelessWidget {
                                     // homePn5 (416:1180)
                                     margin: EdgeInsets.fromLTRB(
                                         0 * fem, 15 * fem, 0 * fem, 15 * fem),
-                                    // width: screenWidth * 0.125,
                                     padding: EdgeInsets.fromLTRB(
                                         0 * fem, 0 * fem, 0 * fem, 0 * fem),
                                     child: Column(
@@ -713,7 +685,6 @@ class MenuPromoPage extends StatelessWidget {
                                   onTap: () {},
                                   child: Container(
                                     // promosaLm (416:1184)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 2.46 * fem, 52 * fem, 0 * fem),
                                     margin: EdgeInsets.fromLTRB(
                                         0 * fem, 15 * fem, 0 * fem, 15 * fem),
                                     width: screenWidth * 0.125,
@@ -756,7 +727,6 @@ class MenuPromoPage extends StatelessWidget {
                                   },
                                   child: Container(
                                     // ordersZTb (416:1187)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 2 * fem, 60.5 * fem, 0 * fem),
                                     margin: EdgeInsets.fromLTRB(
                                         0 * fem, 15 * fem, 0 * fem, 15 * fem),
                                     width: screenWidth * 0.125,
@@ -799,7 +769,6 @@ class MenuPromoPage extends StatelessWidget {
                                   },
                                   child: Container(
                                     // chatYqK (416:1190)
-//                         margin: EdgeInsets.fromLTRB(0 * fem, 3 * fem, 0 * fem, 0 * fem),
                                     margin: EdgeInsets.fromLTRB(
                                         0 * fem, 15 * fem, 0 * fem, 15 * fem),
                                     width: screenWidth * 0.125,
