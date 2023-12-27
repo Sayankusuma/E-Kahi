@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/gestures.dart';
 import 'dart:ui';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:myapp/utils.dart';
-// import 'login-with-phone-number.dart';
+import 'login-with-phone-number.dart';
 
 class OnboardingPage extends StatelessWidget {
   @override
@@ -13,8 +10,6 @@ class OnboardingPage extends StatelessWidget {
     double ffem = fem * 0.97;
 
     return Container(
-      // width: MediaQuery.of(context).size.width / 0.8,
-      // height: MediaQuery.of(context).size.width / 0.5,
       child: Container(
         // onboardingtDb (1:377)
         width: double.infinity,
@@ -133,13 +128,6 @@ class OnboardingPage extends StatelessWidget {
                           Navigator.pushNamed(context, '/signup');
                         },
                         style: ElevatedButton.styleFrom(
-                          // margin: EdgeInsets.only(bottom: 10 * fem),
-                          // width: double.infinity,
-                          // height: 40 * fem,
-                          // decoration: BoxDecoration(
-                          //   color: Color(0xff1b4965),
-                          //   borderRadius: BorderRadius.circular(20 * fem),
-                          // ),
                           padding: EdgeInsets.fromLTRB(110 * fem, 15 * fem, 110 * fem, 15 * fem),
                           backgroundColor: const Color(0xffffffff),
                           shape: RoundedRectangleBorder(
