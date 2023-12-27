@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/gestures.dart';
-// import 'dart:ui';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:myapp/utils.dart';
+import 'dart:ui';
 
 class KeranjangPage extends StatelessWidget {
   @override
@@ -22,12 +19,10 @@ class KeranjangPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-//                   width: double.infinity,
                   height: screenHeight,
                   width: screenWidth,
                   child: Container(
                     // keranjangwYq (202:59)
-                    //         width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xffffffff),
                     ),
@@ -37,10 +32,8 @@ class KeranjangPage extends StatelessWidget {
                         Container(
                           // seluruh konten
                           // autogroupnyrhrA1 (5yJAU4iKVEF395RS3UNYrH)
-//                           padding: EdgeInsets.fromLTRB(16 * fem, 21 * fem, 16 * fem, 0 * fem),
                           height: screenHeight,
                           width: screenWidth,
-//                           width: double.infinity,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -116,7 +109,6 @@ class KeranjangPage extends StatelessWidget {
                                                   EdgeInsets.fromLTRB(
                                                       0, 0 * fem, 0, 0 * fem),
                                               title: Container(
-//                                                   margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 8 * fem),
                                                 height: screenHeight * 0.03,
                                                 child: Text(
                                                   'TOKO BUNDA',
@@ -133,7 +125,6 @@ class KeranjangPage extends StatelessWidget {
                                               subtitle: Column(
                                                 children: [
                                                   Container(
-//                                                       margin: EdgeInsets.fromLTRB(18 * fem, 0 * fem, 0 * fem, 18 * fem),
                                                     width: screenWidth * 0.99,
                                                     height: screenHeight * 0.2,
                                                     decoration: BoxDecoration(
@@ -158,16 +149,12 @@ class KeranjangPage extends StatelessWidget {
                                                               .center,
                                                       children: [
                                                         Container(
-//                                                               align: Alignment.center,
-//                                                               crossAxisAlignment: CrossAxisAlignment.center,
-//                                                               padding: EdgeInsets.fromLTRB(20 * fem, 0.05 * screenHeight, 20 * fem, 0),
                                                           height: 0.05 *
                                                               screenHeight,
                                                           margin:
                                                               EdgeInsets.all(
                                                                   screenWidth *
                                                                       0.05),
-//                                                             fit: BoxFit.cover,
                                                           child: Column(
                                                             crossAxisAlignment:
                                                                 CrossAxisAlignment
@@ -238,7 +225,6 @@ class KeranjangPage extends StatelessWidget {
                                                             ],
                                                           ),
                                                         ),
-//                                                             ),
                                                         SizedBox(
                                                             width: screenWidth *
                                                                 0.0125),
@@ -267,15 +253,6 @@ class KeranjangPage extends StatelessWidget {
                                                         10 * fem,
                                                         0 * fem,
                                                         15 * fem),
-//                                                       decoration: BoxDecoration(
-//                                                         border: Border.all(
-//                                                           color: Color(0xff1b4965),
-//                                                           width: 0.2,
-//                                                         ),
-//                                                         color: Color(0xffffffff),
-//                                                         borderRadius: BorderRadius.circular(10),
-//                                                       ),
-//                                                       child: Center(
                                                     child: ElevatedButton(
                                                       onPressed: () {},
                                                       style: ElevatedButton
@@ -307,10 +284,7 @@ class KeranjangPage extends StatelessWidget {
                                                             screenWidth * 0.475,
                                                             screenHeight *
                                                                 0.015),
-                                                        //                                               margin: EdgeInsets.fromLTRB(0 * fem, 7 * fem, 0 * fem, 7 * fem),
                                                       ),
-//                                                           child: Align(
-//                                                             alignment: Alignment.center,
                                                       child: Center(
                                                         child: Text(
                                                           'Lihat menu lainnya',
@@ -329,7 +303,6 @@ class KeranjangPage extends StatelessWidget {
                                                                 0xff000000),
                                                           ),
                                                         ),
-//                                                             ),
                                                       ),
                                                     ),
                                                   ),
@@ -351,20 +324,13 @@ class KeranjangPage extends StatelessWidget {
                                   child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-//                                           padding: EdgeInsets.fromLTRB(5 * fem, 3.5 * fem, 5 * fem, 3.5 * fem),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(20),
-//                                             side: BorderSide(
-//                                               color: Color(0xff1b4965), // Ganti dengan warna border yang diinginkan
-//                                               width: 0.25, // Ganti dengan lebar border yang diinginkan
-
-//                                             ),
                                       ),
                                       elevation: 0,
                                       backgroundColor: const Color(0xff1b4965),
                                       fixedSize: Size(screenWidth * 0.9,
                                           screenHeight * 0.045),
-//                                               margin: EdgeInsets.fromLTRB(0 * fem, 7 * fem, 0 * fem, 7 * fem),
                                     ),
                                     child: Center(
                                       child: Text(
@@ -387,7 +353,6 @@ class KeranjangPage extends StatelessWidget {
                                 padding: EdgeInsets.fromLTRB(0, 5 * fem, 0, 0),
                                 child: Container(
                                   height: screenHeight * 0.1,
-                                  //                 width: 90,
                                   width: screenWidth,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
@@ -457,8 +422,6 @@ class KeranjangPage extends StatelessWidget {
                                               context, '/promoToko');
                                         },
                                         child: Container(
-                                          // promosaLm (416:1184)
-                                          //                         margin: EdgeInsets.fromLTRB(0 * fem, 2.46 * fem, 52 * fem, 0 * fem),
                                           margin: EdgeInsets.fromLTRB(0 * fem,
                                               15 * fem, 0 * fem, 15 * fem),
                                           width: screenWidth * 0.235,
@@ -505,8 +468,6 @@ class KeranjangPage extends StatelessWidget {
                                               context, '/keranjang');
                                         },
                                         child: Container(
-                                          // ordersZTb (416:1187)
-                                          //                         margin: EdgeInsets.fromLTRB(0 * fem, 2 * fem, 60.5 * fem, 0 * fem),
                                           margin: EdgeInsets.fromLTRB(0 * fem,
                                               15 * fem, 0 * fem, 15 * fem),
                                           width: screenWidth * 0.235,
@@ -553,8 +514,6 @@ class KeranjangPage extends StatelessWidget {
                                               context, '/menuProfil');
                                         },
                                         child: Container(
-                                          // chatYqK (416:1190)
-                                          //                         margin: EdgeInsets.fromLTRB(0 * fem, 3 * fem, 0 * fem, 0 * fem),
                                           margin: EdgeInsets.fromLTRB(0 * fem,
                                               15 * fem, 0 * fem, 15 * fem),
                                           width: screenWidth * 0.235,
