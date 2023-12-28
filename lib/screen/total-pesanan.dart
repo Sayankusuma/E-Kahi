@@ -30,16 +30,16 @@ class TotalPesananPage extends StatelessWidget {
                   EdgeInsets.fromLTRB(0 * fem, 0 * fem, 341 * fem, 12 * fem),
               width: 18 * fem,
               height: 15 * fem,
-              child:TextButton(
-              onPressed:  () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => KeranjangPage()),
-                );
-              },
-              style:  TextButton.styleFrom (
-                padding:  EdgeInsets.zero,
-              ),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => KeranjangPage()),
+                  );
+                },
+                style: TextButton.styleFrom(
+                  padding: EdgeInsets.zero,
+                ),
                 child: Image.asset(
                   'assets/screen/images/vector-fPj.png',
                   width: 18 * fem,
