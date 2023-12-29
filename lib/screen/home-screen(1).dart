@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/models/user_model.dart';
+import 'package:myapp/providers/auth_provider.dart';
+import 'package:myapp/providers/product_provider.dart';
+import 'package:myapp/widgets/home_widget.dart';
+import 'package:provider/provider.dart';
 
-class MyApp extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
-    );
-  }
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _menuDrawer = GlobalKey<ScaffoldState>();
-
   void _openDrawer() {
     _menuDrawer.currentState!.openDrawer();
   }
@@ -29,6 +26,9 @@ class _HomePageState extends State<HomePage> {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
+    AuthProvider authProvider = Provider.of<AuthProvider>(context);
+    UserModel user = authProvider.user;
+    ProductProvider productProvider = Provider.of<ProductProvider>(context);
     return Directionality(
       textDirection: TextDirection.ltr,
       child: Scaffold(
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                   leading: Icon(Icons.logout),
                   title: Text('Log Out'),
                   onTap: () {
-                    Navigator.pushNamed(context, '/');
+                    Navigator.pushNamed(context, '/onboarding');
                   },
                 ),
                 // konten lain
@@ -250,75 +250,18 @@ class _HomePageState extends State<HomePage> {
                             SliverList(
                               delegate: SliverChildBuilderDelegate(
                                 (BuildContext context, int index) {
-                                  if (index >= 3) return null;
+                                  if (index >= 1) return null;
                                   return Center(
-                                    // group64GEH (120:970)
-                                    child: ListTile(
-                                      subtitle: ElevatedButton(
-                                        // group61nyK (120:954)
-                                        onPressed: () {
-                                          Navigator.pushNamed(
-                                              context, '/menuTokoBunda');
-                                        },
-                                        style: ElevatedButton.styleFrom(
-                                          primary: Colors.white,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(16 * fem),
-                                          ),
-                                          elevation: 4 * fem,
-                                          fixedSize: Size(screenWidth * 0.8,
-                                              screenHeight * 0.225),
-                                        ),
-                                        child: Container(
-                                          child: Row(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                // rectangle33EqK (227:152)
-                                                margin: EdgeInsets.all(
-                                                    screenWidth * 0.0005),
-                                                width: screenWidth * 0.38,
-                                                height: screenHeight * 0.175,
-                                                child: ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          16 * fem),
-                                                  child: Image.asset(
-                                                    'assets/screen/images/rectangle-33.png',
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                  width: screenWidth * 0.1),
-                                              Container(
-                                                // tokobundaYLD (120:335)
-                                                margin: EdgeInsets.fromLTRB(
-                                                    0 * fem,
-                                                    0 * fem,
-                                                    0 * fem,
-                                                    0 * fem),
-                                                child: Text(
-                                                  'TOKO BUNDA',
-                                                  style: TextStyle(
-                                                    fontFamily: 'Inter',
-                                                    fontSize: 12 * ffem,
-                                                    fontWeight: FontWeight.w700,
-                                                    height: 1.2125 * ffem / fem,
-                                                    letterSpacing: 0.12 * fem,
-                                                    color: Color(0xff1d1d1d),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  );
+                                      // group64GEH (120:970)
+                                      child: Column(
+                                    children: [
+                                      ListKategoriOf(label: 'TokoBunda'),
+                                      ListKategoriOf(label: 'TokoPapih'),
+                                      ListKategoriOf(label: 'TokoIbuYum')
+                                    ],
+                                  ));
                                 },
-                                childCount: 3,
+                                childCount: 1,
                               ),
                             ),
                           ],

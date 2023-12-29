@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 
-class MenuTokoBundaPage extends StatelessWidget {
+class MenuTokoIbuYumPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -126,7 +126,7 @@ class MenuTokoBundaPage extends StatelessWidget {
                                                   width: 108 * fem,
                                                   height: 20 * fem,
                                                   child: Text(
-                                                    'TOKO BUNDA',
+                                                    'TOKO IBU YUM',
                                                     style: TextStyle(
                                                       fontFamily: 'Inter',
                                                       fontSize: 16 * ffem,
@@ -150,7 +150,7 @@ class MenuTokoBundaPage extends StatelessWidget {
                                                   width: 108 * fem,
                                                   height: 20 * fem,
                                                   child: Text(
-                                                    'TOKO BUNDA',
+                                                    'TOKO IBU YUM',
                                                     style: TextStyle(
                                                       fontFamily: 'Inter',
                                                       fontSize: 16 * ffem,

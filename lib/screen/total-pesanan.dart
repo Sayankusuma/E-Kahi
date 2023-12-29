@@ -32,10 +32,10 @@ class TotalPesananPage extends StatelessWidget {
               height: 15 * fem,
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => KeranjangPage()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => KeranjangPage()),
+                  // );
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
@@ -375,10 +375,10 @@ class TotalPesananPage extends StatelessWidget {
               ),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MenuTokoPage()),
-                  ); // Kembali ke halaman sebelumnya
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => MenuTokoPage()),
+                  // ); // Kembali ke halaman sebelumnya
                 },
                 child: Center(
                   child: Text(

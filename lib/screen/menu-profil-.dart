@@ -23,7 +23,6 @@ class MenuProfilPage extends StatelessWidget {
                 Container(
                   height: screenHeight,
                   width: screenWidth,
-
                   child: Container(
                     width: screenWidth,
                     decoration: BoxDecoration(
@@ -102,7 +101,6 @@ class MenuProfilPage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-
                             ],
                           ),
                         ),
@@ -296,7 +294,7 @@ class MenuProfilPage extends StatelessWidget {
                               ],
                             ),
                           ),
-                        ),            
+                        ),
                       ],
                     ),
                   ),

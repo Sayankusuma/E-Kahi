@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'login-with-phone-number.dart';
 
 class OnboardingPage extends StatelessWidget {
   @override
@@ -9,7 +8,7 @@ class OnboardingPage extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
 
-    return Container(
+    return SingleChildScrollView(
       child: Container(
         // onboardingtDb (1:377)
         width: double.infinity,
@@ -93,42 +92,44 @@ class OnboardingPage extends StatelessWidget {
                 ),
               ),
               Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,                    
-                    children: [
-                      Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Center(
                       child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/login');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.fromLTRB(145 * fem, 15 * fem, 145 * fem, 15 * fem),
-                        backgroundColor: const Color(0xff1B4965),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20 * fem),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/login');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.fromLTRB(
+                              145 * fem, 15 * fem, 145 * fem, 15 * fem),
+                          backgroundColor: const Color(0xff1B4965),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20 * fem),
+                          ),
+                        ),
+                        child: Text(
+                          'Log in',
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 12 * ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1 * ffem / fem,
+                            letterSpacing: 0.16 * fem,
+                            color: Color(0xffffffff),
+                          ),
                         ),
                       ),
-                      child: Text(
-                        'Log in',
-                        style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 12 * ffem,
-                          fontWeight: FontWeight.w700,
-                          height: 1 * ffem / fem,
-                          letterSpacing: 0.16 * fem,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                  ),
-                      ),
-                      SizedBox(height: 10),
-                      Center(
-                        child: ElevatedButton(
+                    ),
+                    SizedBox(height: 10),
+                    Center(
+                      child: ElevatedButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/signup');
                         },
                         style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.fromLTRB(110 * fem, 15 * fem, 110 * fem, 15 * fem),
+                          padding: EdgeInsets.fromLTRB(
+                              110 * fem, 15 * fem, 110 * fem, 15 * fem),
                           backgroundColor: const Color(0xffffffff),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20 * fem),
@@ -146,10 +147,10 @@ class OnboardingPage extends StatelessWidget {
                             color: Color(0xff1b4965),
                           ),
                         ),
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
               ),
             ],
           ),
