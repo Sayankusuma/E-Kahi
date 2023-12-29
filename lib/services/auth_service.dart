@@ -27,10 +27,9 @@ class AuthService {
     print(response.body);
 
     if (response.statusCode == 200) {
-      var data = jsonDecode(response.body)['data'];
-      UserModel user = UserModel.fromJson(data['user']);
-      user.token = 'Bearer ' + data['access_token'];
-
+      var data = jsonDecode(response.body)['user'];
+      UserModel user = UserModel.fromJson(data);
+      user.token = data['access_token'];
       return user;
     } else {
       throw Exception('Gagal Register');
@@ -57,8 +56,8 @@ class AuthService {
     print(response.body);
 
     if (response.statusCode == 200) {
-      var data = jsonDecode(response.body)['data'];
-      UserModel user = UserModel.fromJson(data['user']);
+      var data = jsonDecode(response.body)['user'];
+      UserModel user = UserModel.fromJson(data);
       user.token = "Bearer ${data['access_token']}";
 
       return user;

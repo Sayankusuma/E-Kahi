@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/providers/auth_provider.dart';
 import 'package:myapp/providers/product_provider.dart';
+import 'package:myapp/screen/daftar-menu-pertoko(ahmed).dart';
 import 'package:myapp/screen/home-screen(1).dart';
+import 'package:myapp/screen/home-screen.dart';
 import 'package:myapp/screen/keranjang.dart';
 import 'package:myapp/screen/masuk.dart';
 import 'package:myapp/screen/menu-profil-.dart';
@@ -59,7 +61,7 @@ class MyApp extends StatelessWidget {
           '/signup': (context) => RegistrationPage(),
           '/home': (context) => HomeScreen(),
           '/metodeTopup': (context) => MetodeTopupPage(),
-          '/menu/TokoBunda': (context) => MenuTokoBundaPage(),
+          '/menuTokoBunda': (context) => MenuTokoBundaPage(),
           '/menu/TokoPapih': (context) => MenuTokoPapihPage(),
           '/menu/TokoIbuYum': (context) => MenuTokoIbuYumPage(),
           '/menuPromo': (context) => MenuPromoPage(),

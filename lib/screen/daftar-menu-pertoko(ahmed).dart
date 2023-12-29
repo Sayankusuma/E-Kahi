@@ -17,8 +17,8 @@ class _MenuTokoPageState extends State<MenuTokoPage> {
   }
 
   List<ProductModel> filterProducts(
-      List<ProductModel> products, String vendor_id) {
-    return products.where((product) => product.vendor_id == vendor_id).toList();
+      List<ProductModel> products, String vendor_name) {
+    return products.where((product) => product.vendor == vendor_name).toList();
   }
 
   @override
@@ -357,7 +357,7 @@ class _MenuTokoPageState extends State<MenuTokoPage> {
 
                             // Saring data produk berdasarkan kategori
                             List<ProductModel> filteredProducts =
-                                filterProducts(allProducts, '1');
+                                filterProducts(allProducts, 'Bunda');
 
                             // Tampilkan data dalam ListView
                             return ListView.builder(
@@ -407,10 +407,12 @@ class _MenuTokoPageState extends State<MenuTokoPage> {
                                               child: SizedBox(
                                                 width: 95 * fem,
                                                 height: 93 * fem,
-                                                child: Image.network(
-                                                    filteredProducts[index]
-                                                        .image![index]
-                                                        .toString()),
+                                                child: CircleAvatar(
+                                                  backgroundImage: NetworkImage(
+                                                      filteredProducts[index]
+                                                          .url
+                                                          .toString()),
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -631,11 +633,13 @@ class _MenuTokoPageState extends State<MenuTokoPage> {
                                                                 0 * fem),
                                                         width: 95 * fem,
                                                         height: 93 * fem,
-                                                        child: Image.network(
-                                                          filteredProducts[
-                                                                  index]
-                                                              .image
-                                                              .toString(),
+                                                        child: CircleAvatar(
+                                                          backgroundImage:
+                                                              NetworkImage(
+                                                                  filteredProducts[
+                                                                          index]
+                                                                      .url
+                                                                      .toString()),
                                                         ),
                                                       ),
                                                       Container(
